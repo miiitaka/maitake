@@ -1,0 +1,26 @@
+{
+  "name": "maitake",
+  "version": "1.0.0",
+  "description": "WordPress Theme \"Maitake\"",
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miiitaka/maitake.git"
+  },
+  "author": "miiitaka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miiitaka/maitake/issues"
+  },
+  "homepage": "https://github.com/miiitaka/maitake#readme",
+  "dependencies": {
+    "jquery": "^3.1.0"
+  }
+}

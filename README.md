@@ -1,2 +1,2 @@
 # maitake
-Style Guide "Maitake"
+WordPress Theme "Maitake"
