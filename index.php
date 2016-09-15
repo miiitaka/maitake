@@ -2,16 +2,11 @@
 /**
  * The main template file
  *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file exists.
- *
  * @link http://codex.wordpress.org/Template_Hierarchy
  *
  * @package    WordPress
  * @subpackage Maitake
- * @since      Maitake 1.0
+ * @since      1.0.0
  */
 get_header(); ?>
 	<main>
@@ -28,13 +23,13 @@ get_header(); ?>
 					get_template_part( 'template-parts/content', get_post_format() );
 				endwhile; ?>
 
-			<?php
-				the_posts_pagination( array(
-					'prev_text'          => __( 'Previous page', 'twentysixteen' ),
-					'next_text'          => __( 'Next page', 'twentysixteen' ),
-					'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentysixteen' ) . ' </span>',
-				) );
-			?>
+				<?php
+					the_posts_pagination( array(
+						'prev_text'          => 'Previous page',
+						'next_text'          => 'Next page',
+						'before_page_number' => '<span class="meta-nav screen-reader-text">Page</span>',
+					) );
+				?>
 			</section>
 		<?php else : ?>
 			<?php get_template_part( 'template-parts/content', 'none' ); ?>
