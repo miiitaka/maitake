@@ -7,9 +7,11 @@
  * @since      1.0.0
  */
 ?>
-<footer>
-</footer>
-
-<?php wp_footer(); ?>
+		</main>
+		<?php get_sidebar(); ?>
+	</div>
+	<footer>
+	</footer>
+	<?php wp_footer(); ?>
 </body>
 </html>
