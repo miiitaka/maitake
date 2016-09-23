@@ -75,7 +75,7 @@ add_action( 'after_setup_theme', 'maitake_remove_action_head' );
  * ウィジェットエリアの登録
  *
  * @since 1.0.0
- * @link https://developer.wordpress.org/reference/functions/register_sidebar/
+ * @link  https://developer.wordpress.org/reference/functions/register_sidebar/
  */
 function maitake_widgets_init() {
 	register_sidebar( array(

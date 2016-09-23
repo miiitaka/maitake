@@ -2,9 +2,9 @@
 /**
  * The template for displaying the header
  *
- * @package     WordPress
- * @subpackage  Maitake
- * @since       Maitake 1.0.0
+ * @package    WordPress
+ * @subpackage Maitake
+ * @since      Maitake 1.0.0
  */
 ?><!DOCTYPE html>
 <html>
@@ -37,3 +37,5 @@
 			?>
 		</nav>
 	<?php endif; ?>
+	<div>
+		<main>

@@ -10,7 +10,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header>
 		<?php if ( is_sticky() && is_home() && ! is_paged() ) : ?>
-			<span class="sticky-post">Featured</span>
+			<span>Featured</span>
 		<?php endif; ?>
 
 		<?php the_title( sprintf( '<h2><a href="%s">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
@@ -23,17 +23,17 @@
 	<div>
 		<?php
 			the_content( sprintf(
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentysixteen' ),
+				__( 'Continue reading<span> "%s"</span>', 'twentysixteen' ),
 				get_the_title()
 			) );
 
 			wp_link_pages( array(
-				'before'      => '<div class="page-links"><span>Pages:</span>',
+				'before'      => '<div><span>Pages:</span>',
 				'after'       => '</div>',
 				'link_before' => '<span>',
 				'link_after'  => '</span>',
-				'pagelink'    => '<span class="screen-reader-text">Page</span>',
-				'separator'   => '<span class="screen-reader-text">, </span>',
+				'pagelink'    => '<span>Page</span>',
+				'separator'   => '<span>, </span>',
 			) );
 		?>
 	</div>

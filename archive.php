@@ -1,8 +1,8 @@
 <?php
 /**
- * The main template file
+ * The template for displaying archive pages
  *
- * @link       http://codex.wordpress.org/Template_Hierarchy
+ * @link       https://codex.wordpress.org/Template_Hierarchy
  * @package    WordPress
  * @subpackage Maitake
  * @since      1.0.0
@@ -10,11 +10,12 @@
 get_header(); ?>
 	<?php if ( have_posts() ) : ?>
 		<section>
-			<?php if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1><?php single_post_title(); ?></h1>
-				</header>
-			<?php endif; ?>
+			<header>
+				<?php
+					the_archive_title( '<h1>', '</h1>' );
+					the_archive_description( '<div>', '</div>' );
+				?>
+			</header>
 
 			<?php
 				while ( have_posts() ) : the_post();
