@@ -31,8 +31,7 @@
 		?>
 	</div>
 
-	<footer class="entry-footer">
-		<?php twentysixteen_entry_meta(); ?>
+	<footer>
 		<?php
 			edit_post_link(
 				sprintf(
