@@ -2,10 +2,12 @@
 Theme Name: Maitake
 Author: miiitaka
 Description: Maitake is Kinoko.
+Theme URI: https://github.com/miiitaka/maitake
+Author URI: https://github.com/miiitaka
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: white
+Tags:
 Text Domain: maitake
 
 This theme, like WordPress, is licensed under the GPL.
@@ -230,7 +232,7 @@ optgroup {
 	float: right;
 	margin: 0 auto;
 	padding: 0 10px;
-	width: 770px;
+	width: 765px;
 }
 
 .layout-sidebar {
@@ -241,14 +243,25 @@ optgroup {
 }
 
 .layout-container-list {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
 	list-style: none;
 	margin: 0 0 0 -10px;
 	padding: 0;
 	width: 100%;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
 }
 
 .layout-container-list-02 {
-	display: inline-block;
+	border: solid 1px #ddd;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
 	margin: 0 0 10px 10px;
 	padding: 10px;
 	vertical-align: top;
@@ -256,10 +269,11 @@ optgroup {
 }
 
 /**
- * Section Navigation
+ * Section Header Navigation
  */
 .layout-header-nav .menu {
 	display: table;
+	font-size: .8em;
 	margin: 0;
 	padding: 0;
 	table-layout: fixed;
@@ -280,4 +294,11 @@ optgroup {
 
 .layout-header-nav .sub-menu {
 	display: none;
+}
+
+/**
+ * Widget common parts
+ */
+.widget-title {
+	font-size: 1em;
 }

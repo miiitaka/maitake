@@ -25,7 +25,7 @@ function maitake_setup() {
 	set_post_thumbnail_size( 1200, 9999 );
 
 	// head 要素内に投稿とコメントの feed URL を追加する
-	//add_theme_support( 'automatic-feed-links' );
+	add_theme_support( 'automatic-feed-links' );
 
 	// title 要素を head 要素に追加する
 	add_theme_support( 'title-tag' );
