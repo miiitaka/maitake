@@ -19,7 +19,7 @@ get_header(); ?>
 
 		<ul class="layout-container-list">
 		<?php while ( have_posts() ) : the_post(); ?>
-			<li class="layout-container-list-02">
+			<li class="layout-container-list-03">
 				<?php get_template_part( 'template-parts/content-home', get_post_format() ); ?>
 			</li>
 		<?php endwhile; ?>
