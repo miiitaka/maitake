@@ -1,2 +1,3 @@
 # maitake
-WordPress Theme "Maitake"
+WordPress Theme "Maitake" Build. 
+
