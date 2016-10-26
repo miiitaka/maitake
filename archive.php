@@ -18,11 +18,13 @@ get_header(); ?>
 			?>
 		</header>
 
-		<?php
-			while ( have_posts() ) : the_post();
-				get_template_part( 'template-parts/content', get_post_format() );
-			endwhile;
-		?>
+		<ul class="layout-container-list">
+			<?php while ( have_posts() ) : the_post(); ?>
+				<li class="layout-container-list-03">
+					<?php get_template_part( 'template-parts/content-home', get_post_format() ); ?>
+				</li>
+			<?php endwhile; ?>
+		</ul>
 
 		<?php
 			the_posts_pagination( array(
