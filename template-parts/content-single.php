@@ -10,7 +10,18 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header>
 		<?php the_title( '<h1>', '</h1>' ); ?>
+		<p class="list-post-time">
+			<time><?php the_time( get_option( 'date_format' ) ); ?></time>
+		</p>
 	</header>
+
+	<?php
+	if ( ( function_exists( 'has_post_thumbnail' ) ) && ( has_post_thumbnail() ) ) {
+		echo sprintf( '<figure><a href="%s">', esc_url ( get_permalink () ) );
+		the_post_thumbnail ( 'full', array( 'alt' => the_title_attribute ( 'echo=0' ) ) );
+		echo '</figure>';
+	}
+	?>
 
 	<div>
 		<?php

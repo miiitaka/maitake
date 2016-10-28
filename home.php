@@ -29,7 +29,7 @@ get_header(); ?>
 			the_posts_pagination( array(
 				'prev_text'          => 'Previous page',
 				'next_text'          => 'Next page',
-				'before_page_number' => 'Page',
+				'before_page_number' => 'Page'
 			) );
 		?>
 	</section>
