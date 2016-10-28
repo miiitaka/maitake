@@ -14,7 +14,7 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 
-/*
+/*******************************************
  * Reset Style Sheet
  */
 html {
@@ -205,7 +205,7 @@ optgroup {
 	font-weight: bold;
 }
 
-/**
+/*******************************************
  * Section Layout
  */
 .layout-header {
@@ -242,7 +242,7 @@ optgroup {
 	width: 300px;
 }
 
-/**
+/*******************************************
  * Section Header Navigation
  */
 .layout-header-nav .menu {
@@ -270,8 +270,8 @@ optgroup {
 	display: none;
 }
 
-/**
- * Section Header Navigation
+/*******************************************
+ * Section Container List
  */
 .layout-container-list {
 	display: -webkit-box;
@@ -293,7 +293,7 @@ optgroup {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
-	margin: 0 0 10px 0;
+	margin: 0 0 5px 0;
 	padding: 5px;
 	vertical-align: top;
 	width: 240px;
@@ -313,9 +313,124 @@ optgroup {
 	font-size: 1em;
 }
 
-/**
+/*******************************************
  * Widget common parts
  */
 .widget-title {
+	border-left: solid 5px #000;
 	font-size: 1em;
+	padding: 0 0 0 10px;
+}
+
+/* Archive Widget */
+.widget_archive ul {
+	font-size: .8em;
+}
+
+.widget_archive label {
+	font-size: .8em;
+}
+
+.widget_archive select {
+	font-size: .8em;
+	height: 1.8em;
+}
+
+/* Calendar Widget */
+.widget_calendar table {
+	font-size: .8em;
+	margin: 0 5%;
+	width: 90%;
+}
+
+.widget_calendar table caption {
+	margin: 0 0 5px 0;
+}
+
+.widget_calendar tbody td {
+	text-align: center;
+}
+
+.widget_calendar tfoot #prev {
+	text-align: left;
+}
+
+.widget_calendar tfoot #next {
+	text-align: right;
+}
+
+/* Categories Widget */
+.widget_categories ul {
+	font-size: .8em;
+}
+
+.widget_categories ul.children {
+	font-size: 1em;
+}
+
+.widget_categories label {
+	font-size: .8em;
+	margin: 0 5px 0 0;
+}
+
+.widget_categories select {
+	font-size: .8em;
+	height: 1.8em;
+}
+
+/* Custom Menu Widget */
+.widget_nav_menu ul {
+	font-size: .8em;
+}
+
+/* Recent Comments Widget */
+.widget_recent_comments ul {
+	font-size: .8em;
+}
+
+/* Recent Posts Widget */
+.widget_recent_entries ul {
+	font-size: .8em;
+}
+
+/* Meta Widget */
+.widget_meta ul {
+	font-size: .8em;
+}
+
+/* Pages Widget */
+.widget_pages ul {
+	font-size: .8em;
+}
+
+.widget_pages ul.children {
+	font-size: 1em;
+}
+
+/* RSS Widget */
+.widget_rss ul {
+	font-size: .8em;
+}
+
+.widget_rss .rss-date {
+	display: block;
+}
+
+/* Search Widget */
+.widget_search label {
+	font-size: .8em;
+}
+
+.widget_search input[type=submit] {
+	font-size: .8em;
+}
+
+/* Tags Widget (Empty) */
+.widget_tag_cloud {
+
+}
+
+/* Text Widget */
+.widget_text .textwidget {
+	font-size: .8em;
 }
