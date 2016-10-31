@@ -23,7 +23,7 @@
 	<div>
 		<?php
 			the_content( sprintf(
-				__( 'Continue reading<span> "%s"</span>', 'twentysixteen' ),
+				'Continue reading<span> "%s"</span>',
 				get_the_title()
 			) );
 
@@ -39,11 +39,10 @@
 	</div>
 
 	<footer>
-		<?php // twentysixteen_entry_meta(); ?>
 		<?php
 			edit_post_link(
 				sprintf(
-					__( 'Edit<span class="screen-reader-text"> "%s"</span>', 'twentysixteen' ),
+					'Edit<span class="screen-reader-text"> "%s"</span>',
 					get_the_title()
 				),
 				'<span class="edit-link">',

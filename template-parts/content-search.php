@@ -13,29 +13,21 @@
 		<?php the_title( sprintf( '<h2><a href="%s">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 	</header>
 
-	<?php if ( 'post' === get_post_type() ) : ?>
-		<footer>
-			<?php
-				edit_post_link(
-					sprintf(
-						'Edit<span> "%s"</span>',
-						get_the_title()
-					),
-					'<span>',
-					'</span>'
-				);
-			?>
-		</footer>
-	<?php else : ?>
+	<div>
+		<?php the_excerpt(); ?>
+	</div>
+
+	<footer>
+		<p><time><?php the_time( get_option( 'date_format' ) ); ?></time></p>
 		<?php
 			edit_post_link(
 				sprintf(
 					'Edit<span> "%s"</span>',
 					get_the_title()
 				),
-				'<footer><span>',
-				'</span></footer>'
+				'<span>',
+				'</span>'
 			);
 		?>
-	<?php endif; ?>
+	</footer>
 </article>
