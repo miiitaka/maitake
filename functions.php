@@ -21,14 +21,42 @@ function maitake_setup() {
 	// 投稿・固定ページなどにサムネイルを登録できるようにする
 	add_theme_support( 'post-thumbnails' );
 
-	// 投稿・固定ページなどにサムネイルを登録できる画像サイズを指定
-	set_post_thumbnail_size( 1200, 9999 );
-
 	// head 要素内に投稿とコメントの feed URL を追加する
 	add_theme_support( 'automatic-feed-links' );
 
 	// title 要素を head 要素に追加する
 	add_theme_support( 'title-tag' );
+
+	/**
+	 * Switch default core markup for search form, comment form, and comments
+	 * to output valid HTML5.
+	 */
+	add_theme_support( 'html5', array(
+		'search-form',
+		'comment-form',
+		'comment-list',
+		'gallery',
+		'caption'
+	) );
+
+	/**
+	 * 投稿フォーマットのサポート
+	 * @see: https://codex.wordpress.org/Post_Formats
+	 */
+	add_theme_support( 'post-formats', array(
+		'aside',
+		'image',
+		'video',
+		'quote',
+		'link',
+		'gallery',
+		'status',
+		'audio',
+		'chat'
+	) );
+
+	// 投稿・固定ページなどにサムネイルを登録できる画像サイズを指定
+	set_post_thumbnail_size( 1200, 9999 );
 
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
