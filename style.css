@@ -274,18 +274,17 @@ optgroup {
  * Section Container List
  */
 .layout-container-list {
-	display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
 	list-style: none;
 	margin: 0;
 	padding: 0;
 	width: 100%;
 	-webkit-flex-wrap: wrap;
-	flex-wrap: wrap;
 	-webkit-box-pack: justify;
-	-webkit-justify-content: space-between;
-	justify-content: space-between;
+	-webkit-justify-content: flex-start;
 }
 
 .layout-container-list li {
@@ -293,10 +292,10 @@ optgroup {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
-	margin: 0 0 5px 0;
+	margin: 0 5px 5px 0;
 	padding: 5px;
 	vertical-align: top;
-	width: 240px;
+	width: 238px;
 }
 
 .layout-container-list section {
