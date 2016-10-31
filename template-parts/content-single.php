@@ -10,9 +10,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header>
 		<?php the_title( '<h1>', '</h1>' ); ?>
-		<p class="list-post-time">
-			<time><?php the_time( get_option( 'date_format' ) ); ?></time>
-		</p>
+		<p><time><?php the_time( get_option( 'date_format' ) ); ?></time></p>
 	</header>
 
 	<?php
