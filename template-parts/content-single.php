@@ -27,7 +27,7 @@
 
 			wp_link_pages( array(
 				'before'      => 'Pages:',
-				'after'       => '</div>',
+				'after'       => '',
 				'link_before' => '<span>',
 				'link_after'  => '</span>',
 				'pagelink'    => 'Page',
