@@ -318,6 +318,14 @@ optgroup {
 	font-size: .8em;
 }
 
+.layout-container-list .list-post-time time:before {
+	content: "\f155";
+	display: inline-block;
+	-webkit-font-smoothing: antialiased;
+	font: normal 20px/1 'dashicons';
+	vertical-align: top;
+}
+
 /*******************************************
  * Widget common parts
  */
