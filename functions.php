@@ -124,6 +124,9 @@ add_action( 'widgets_init', 'maitake_widgets_init' );
  * @since 1.0.0
  */
 function maitake_scripts() {
+	// WordPress Dash Icon
+	wp_enqueue_style( 'dashicons' );
+
 	// Theme stylesheet.
 	wp_enqueue_style( 'maitake-style', get_stylesheet_uri() );
 }
