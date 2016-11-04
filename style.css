@@ -316,14 +316,19 @@ optgroup {
 
 .layout-container-list .list-post-time {
 	font-size: .8em;
+	margin: 0;
 }
 
-.layout-container-list .list-post-time time:before {
-	content: "\f155";
+.layout-container-list .list-post-time time::before {
+	content: "\f321";
 	display: inline-block;
-	-webkit-font-smoothing: antialiased;
-	font: normal 20px/1 'dashicons';
-	vertical-align: top;
+	font: 1.2em 'dashicons';
+	margin: -.2em 2px 0 0;
+	vertical-align: middle;
+}
+
+.layout-container-list .list-post-excerpt {
+	font-size: .8em;
 }
 
 /*******************************************
@@ -448,7 +453,6 @@ optgroup {
 	font-size: .8em;
 }
 
-
 /*******************************************
  * Posts parts
  */
@@ -457,4 +461,24 @@ optgroup {
 	width: auto;
 	max-width: 100%;
 	max-height: 100%;
+}
+
+.post .post-modified-time,
+.post .post-time {
+	font-size: .8em;
+	margin: 0 10px 0 0;
+}
+.post .post-modified-time::before,
+.post .post-time::before {
+	display: inline-block;
+	font: 1.2em 'dashicons';
+	margin: -.2em 2px 0 0;
+	vertical-align: middle;
+}
+
+.post .post-modified-time::before {
+	content: "\f321";
+}
+.post .post-time::before {
+	content: "\f469";
 }

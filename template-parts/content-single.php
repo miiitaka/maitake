@@ -10,7 +10,10 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header>
 		<?php the_title( '<h1>', '</h1>' ); ?>
-		<p><time><?php the_time( get_option( 'date_format' ) ); ?></time></p>
+		<p>
+			<time class="post-modified-time">最終更新日&nbsp;:&nbsp;<?php the_modified_time( get_option( 'date_format' ) ); ?></time>
+			<time class="post-time">記事公開日&nbsp;:&nbsp;<?php the_time( get_option( 'date_format' ) ); ?></time>
+		</p>
 	</header>
 
 	<?php
@@ -44,12 +47,9 @@
 		<footer>
 			<?php
 				edit_post_link(
-					sprintf(
-						'Edit<span> "%s"</span>',
-						get_the_title()
-					),
-					'<span>',
-					'</span>'
+					sprintf( 'Edit "%s"', get_the_title() ),
+					'<p>',
+					'</p>'
 				);
 			?>
 		</footer>
