@@ -7,7 +7,7 @@
  * @since        1.0.0
  */
 ?>
-<section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php
 		if ( ( function_exists( 'has_post_thumbnail' ) ) && ( has_post_thumbnail() ) ) {
 			echo sprintf( '<figure><a href="%s">', esc_url ( get_permalink () ) );
@@ -22,7 +22,10 @@
 	</header>
 	<footer>
 		<p class="list-post-time">
-			<time><?php the_time( get_option( 'date_format' ) ); ?></time>
+			<time><?php the_modified_time( get_option( 'date_format' ) ); ?></time>
 		</p>
 	</footer>
-</section>
+	<div class="list-post-excerpt">
+		<?php esc_html( the_excerpt() ); ?>
+	</div>
+</article>
