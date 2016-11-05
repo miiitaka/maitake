@@ -10,9 +10,9 @@ if ( post_password_required() ) {
 	return;
 }
 ?>
-<div>
+<section class="comment-wrapper">
 	<?php if ( have_comments() ) : ?>
-		<h2>
+		<h2 class="comment-feedback">
 			<?php
 				$comments_number = get_comments_number();
 				if ( 1 === $comments_number ) {
@@ -44,6 +44,7 @@ if ( post_password_required() ) {
 				) );
 			?>
 		</ol>
+
 		<?php the_comments_navigation(); ?>
 	<?php endif; ?>
 
@@ -53,8 +54,8 @@ if ( post_password_required() ) {
 
 	<?php
 		comment_form( array(
-			'title_reply_before' => '<h2>',
+			'title_reply_before' => '<h2 class="comment-respond-title">',
 			'title_reply_after'  => '</h2>',
 		) );
 	?>
-</div>
+</section>

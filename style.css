@@ -14,7 +14,7 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 
-/*******************************************
+/**
  * Reset Style Sheet
  */
 html {
@@ -242,7 +242,7 @@ optgroup {
 	width: 300px;
 }
 
-/*******************************************
+/**
  * Section Header Navigation
  */
 .layout-header-nav .menu {
@@ -270,7 +270,7 @@ optgroup {
 	display: none;
 }
 
-/*******************************************
+/**
  * Section Container List
  */
 .layout-container-list {
@@ -331,7 +331,7 @@ optgroup {
 	font-size: .8em;
 }
 
-/*******************************************
+/**
  * Widget common parts
  */
 .widget-title {
@@ -453,7 +453,7 @@ optgroup {
 	font-size: .8em;
 }
 
-/*******************************************
+/**
  * Posts parts
  */
 .post img {
@@ -481,4 +481,134 @@ optgroup {
 }
 .post .post-time::before {
 	content: "\f469";
+}
+
+/**
+ * Comment parts
+ */
+.comment-wrapper .comment-feedback {
+	font-size: 1em;
+	margin: 20px 0 10px 0;
+}
+
+.comment-wrapper .comment-feedback::before {
+	content: "\f473";
+	display: inline-block;
+	font: 1.2em 'dashicons';
+	margin: -.2em 2px 0 0;
+	vertical-align: middle;
+}
+
+.comment-wrapper .comment-list,
+.comment-wrapper .comment-list .children {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.comment-wrapper .comment {
+	border: solid 1px #ddd;
+	margin: 0 0 10px 0;
+	padding: 10px;
+}
+
+.comment-wrapper .avatar {
+	border-radius: 50%;
+	height: 42px;
+	margin: 0 5px 0 0;
+	vertical-align: top;
+	width: 42px;
+}
+
+.comment-wrapper .comment-metadata {
+	font-size: .8em;
+	margin: 5px 0;
+}
+
+.comment-wrapper .comment-content {
+	font-size: .8em;
+}
+
+.comment-wrapper .comment-reply-link {
+	font-size: 1em;
+}
+
+.comment-wrapper .comment-reply-link::before {
+	content: "\f242";
+	display: inline-block;
+	font: 1.2em 'dashicons';
+	margin: -.2em 2px 0 0;
+	vertical-align: middle;
+}
+
+.comment-respond .comment-respond-title {
+	font-size: 1em;
+	margin: 20px 0 10px 0;
+}
+
+.comment-respond .comment-respond-title::before {
+	content: "\f119";
+	display: inline-block;
+	font: 1.2em 'dashicons';
+	margin: -.2em 2px 0 0;
+	vertical-align: middle;
+}
+
+.comment-respond .comment-notes {
+	font-size: .8em;
+}
+
+.comment-respond .logged-in-as {
+	font-size: .8em;
+}
+
+.comment-respond label {
+	display: block;
+	font-size: .8em;
+	margin: 0 0 3px 0;
+}
+
+.comment-respond label::before {
+	display: inline-block;
+	font: 1.2em 'dashicons';
+	margin: -.2em 2px 0 0;
+	vertical-align: middle;
+}
+
+.comment-respond .comment-form-comment label::before {
+	content: "\f464";
+}
+
+.comment-respond .comment-form-author label::before {
+	content: "\f110";
+}
+
+.comment-respond .comment-form-email label::before {
+	content: "\f465";
+}
+
+.comment-respond .comment-form-url label::before {
+	content: "\f325";
+}
+
+.comment-respond textarea,
+.comment-respond input[type=text],
+.comment-respond input[type=email],
+.comment-respond input[type=url] {
+	width: 99%;
+}
+
+.comment-respond input[type=submit] {
+	background: #333;
+	border-radius: 0;
+	border: none;
+	box-sizing: border-box;
+	color: #fff;
+	cursor: pointer;
+	padding: 5px 10px;
+}
+
+.comment-respond input[type=submit]:hover {
+	background: #666;
+	transition: all .3s;
 }
