@@ -9,11 +9,16 @@
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header>
-		<?php the_title( '<h1>', '</h1>' ); ?>
-		<p>
-			<time class="post-modified-time">最終更新日&nbsp;:&nbsp;<?php the_modified_time( get_option( 'date_format' ) ); ?></time>
-			<time class="post-time">記事公開日&nbsp;:&nbsp;<?php the_time( get_option( 'date_format' ) ); ?></time>
-		</p>
+		<?php the_title( '<h1 class="post-title">', '</h1>' ); ?>
+		<ul class="post-meta">
+			<?php if ( has_tag() ) : ?>
+				<li class="post-tags"><?php the_tags( "" ); ?></li>
+			<?php endif; ?>
+			<li>
+				<time class="post-modified-time">最終更新日&nbsp;:&nbsp;<?php the_modified_time( get_option( 'date_format' ) ); ?></time>
+				<time class="post-time">記事公開日&nbsp;:&nbsp;<?php the_time( get_option( 'date_format' ) ); ?></time>
+			</li>
+		</ul>
 	</header>
 
 	<div class="post-content">

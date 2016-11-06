@@ -456,18 +456,24 @@ optgroup {
 /**
  * Posts parts
  */
-.post img {
-	height: auto;
-	width: auto;
-	max-width: 100%;
-	max-height: 100%;
+.post .post-title {
+	font-size: 1.5em;
 }
 
+.post .post-meta {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.post .post-tags,
 .post .post-modified-time,
 .post .post-time {
 	font-size: .8em;
 	margin: 0 10px 0 0;
 }
+
+.post .post-tags::before,
 .post .post-modified-time::before,
 .post .post-time::before {
 	display: inline-block;
@@ -476,11 +482,23 @@ optgroup {
 	vertical-align: middle;
 }
 
+.post .post-tags::before {
+	content: "\f323";
+}
+
 .post .post-modified-time::before {
 	content: "\f321";
 }
+
 .post .post-time::before {
 	content: "\f469";
+}
+
+.post img {
+	height: auto;
+	width: auto;
+	max-width: 100%;
+	max-height: 100%;
 }
 
 /**
