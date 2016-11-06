@@ -694,3 +694,33 @@ optgroup {
 	margin: -.2em 2px 0 0;
 	vertical-align: middle;
 }
+
+/**
+ * Search parts
+ */
+.search-result .search-result-title {
+	font-size: 1.2em;
+}
+
+.search-result article {
+	border: solid 1px #ddd;
+	margin: 0 0 10px 0;
+	padding: 5px 10px 0 10px;
+}
+
+.search-result .search-result-title::before {
+	content: "\f179";
+	display: inline-block;
+	font: 1.2em 'dashicons';
+	margin: -.2em 2px 0 0;
+	vertical-align: middle;
+}
+
+.search-result .search-result-post-title {
+	font-size: 1.2em;
+	margin: 0 0 5px 0;
+}
+
+.search-result .search-result-post-excerpt {
+	font-size: .8em;
+}

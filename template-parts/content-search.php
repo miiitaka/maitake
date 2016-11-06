@@ -10,24 +10,29 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header>
-		<?php the_title( sprintf( '<h2><a href="%s">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+		<?php
+			the_title(
+				sprintf(
+					'<h2 class="search-result-post-title"><a href="%s">',
+					esc_url( get_permalink() )
+				),
+				'</a></h2>'
+			); ?>
 	</header>
 
-	<div>
+	<div class="search-result-post-excerpt">
 		<?php the_excerpt(); ?>
 	</div>
 
-	<footer>
-		<p><time><?php the_time( get_option( 'date_format' ) ); ?></time></p>
-		<?php
+	<?php if ( is_user_logged_in() ) : ?>
+		<footer>
+			<?php
 			edit_post_link(
-				sprintf(
-					'Edit<span> "%s"</span>',
-					get_the_title()
-				),
-				'<span>',
-				'</span>'
+				sprintf( 'Edit "%s"', get_the_title() ),
+				'<p>',
+				'</p>'
 			);
-		?>
-	</footer>
+			?>
+		</footer>
+	<?php endif; ?>
 </article>
