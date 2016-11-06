@@ -215,12 +215,14 @@ optgroup {
 
 .layout-header-global {
 	margin: 0 auto;
-	max-width: 1100px;
+	max-width: 1080px;
+	padding: 0 10px;
 }
 
 .layout-header-nav {
 	margin: 0 auto;
-	max-width: 1100px;
+	max-width: 1080px;
+	padding: 0 10px;
 }
 
 .layout-wrapper {
@@ -229,17 +231,33 @@ optgroup {
 }
 
 .layout-contents {
-	float: right;
+	box-sizing: border-box;
+	display: block;
 	margin: 0 auto;
 	padding: 0 10px;
-	width: 765px;
+	width: 100%;
+}
+.layout-sidebar {
+	box-sizing: border-box;
+	display: block;
+	margin: 0 auto;
+	padding: 0 10px;
+	width: 100%;
 }
 
-.layout-sidebar {
-	float: left;
-	margin: 0 auto;
-	padding: 0 5px;
-	width: 300px;
+@media screen and ( min-width: 1100px ) {
+	.layout-contents {
+		float: right;
+		margin: 0 auto;
+		padding: 0;
+		width: 790px;
+	}
+	.layout-sidebar {
+		float: left;
+		margin: 0 auto;
+		padding: 0 5px;
+		width: 300px;
+	}
 }
 
 /**
@@ -289,13 +307,28 @@ optgroup {
 
 .layout-container-list li {
 	border: solid 1px #ddd;
+	box-sizing: border-box;
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
-	margin: 0 5px 5px 0;
+	margin: 0 0 10px 0;
 	padding: 5px;
 	vertical-align: top;
-	width: 238px;
+	width: 100%;
+}
+
+@media screen and ( min-width: 768px ) {
+	.layout-container-list li {
+		margin: 0 .5% 10px .5%;
+		width: 49%;
+	}
+}
+
+@media screen and ( min-width: 1100px ) {
+	.layout-container-list li {
+		margin: 0 .5% 5px .5%;
+		width: 32%;
+	}
 }
 
 .layout-container-list section {
