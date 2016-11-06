@@ -205,7 +205,7 @@ optgroup {
 	font-weight: bold;
 }
 
-/*******************************************
+/**
  * Section Layout
  */
 .layout-header {
@@ -512,6 +512,20 @@ optgroup {
 	padding: 10px;
 }
 
+.comment-wrapper .children .comment::before {
+	content: "\f473";
+	display: inline-block;
+	font: 1.2em 'dashicons';
+	margin: -.2em 2px 0 0;
+	vertical-align: middle;
+}
+
+.comment-wrapper .children .comment {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
 .comment-wrapper .avatar {
 	border-radius: 50%;
 	height: 42px;
@@ -539,6 +553,10 @@ optgroup {
 	font: 1.2em 'dashicons';
 	margin: -.2em 2px 0 0;
 	vertical-align: middle;
+}
+
+.comment-wrapper .comment-close {
+	font-size: 1em;
 }
 
 .comment-respond .comment-respond-title {
