@@ -23,8 +23,8 @@ if ( have_posts() ) :
 			) );
 		} elseif ( is_singular( 'post' ) ) {
 			the_post_navigation( array(
-				'next_text' => 'Next post:%title',
-				'prev_text' => 'Previous post:%title',
+				'next_text' => '%title',
+				'prev_text' => '%title',
 			) );
 		}
 	endwhile;
