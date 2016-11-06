@@ -16,15 +16,15 @@
 		</p>
 	</header>
 
-	<?php
-	if ( ( function_exists( 'has_post_thumbnail' ) ) && ( has_post_thumbnail() ) ) {
-		echo sprintf( '<figure><a href="%s">', esc_url ( get_permalink () ) );
-		the_post_thumbnail ( 'full', array( 'alt' => the_title_attribute ( 'echo=0' ) ) );
-		echo '</figure>';
-	}
-	?>
+	<div class="post-content">
+		<?php
+			if ( ( function_exists( 'has_post_thumbnail' ) ) && ( has_post_thumbnail() ) ) {
+				echo sprintf( '<figure><a href="%s">', esc_url ( get_permalink () ) );
+				the_post_thumbnail ( 'full', array( 'alt' => the_title_attribute ( 'echo=0' ) ) );
+				echo '</figure>';
+			}
+		?>
 
-	<div>
 		<?php
 			the_content();
 
@@ -36,12 +36,14 @@
 				'pagelink'    => 'Page',
 				'separator'   => ',',
 			) );
-
-			if ( '' !== get_the_author_meta( 'description' ) ) {
-				get_template_part( 'template-parts/biography' );
-			}
 		?>
 	</div>
+
+	<?php
+		if ( '' !== get_the_author_meta( 'description' ) ) {
+			get_template_part( 'template-parts/biography' );
+		}
+	?>
 
 	<?php if ( is_user_logged_in() ) : ?>
 		<footer>

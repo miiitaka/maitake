@@ -49,7 +49,7 @@ if ( post_password_required() ) {
 	<?php endif; ?>
 
 	<?php if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
-		<p class="comment-close">Comments are closed.</p>
+		<p>Comments are closed.</p>
 	<?php endif; ?>
 
 	<?php
