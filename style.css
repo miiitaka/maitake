@@ -205,7 +205,7 @@ optgroup {
 	font-weight: bold;
 }
 
-/*******************************************
+/**
  * Section Layout
  */
 .layout-header {
@@ -215,12 +215,14 @@ optgroup {
 
 .layout-header-global {
 	margin: 0 auto;
-	max-width: 1100px;
+	max-width: 1080px;
+	padding: 0 10px;
 }
 
 .layout-header-nav {
 	margin: 0 auto;
-	max-width: 1100px;
+	max-width: 1080px;
+	padding: 0 10px;
 }
 
 .layout-wrapper {
@@ -229,17 +231,33 @@ optgroup {
 }
 
 .layout-contents {
-	float: right;
+	box-sizing: border-box;
+	display: block;
 	margin: 0 auto;
 	padding: 0 10px;
-	width: 765px;
+	width: 100%;
+}
+.layout-sidebar {
+	box-sizing: border-box;
+	display: block;
+	margin: 0 auto;
+	padding: 0 10px;
+	width: 100%;
 }
 
-.layout-sidebar {
-	float: left;
-	margin: 0 auto;
-	padding: 0 5px;
-	width: 300px;
+@media screen and ( min-width: 1100px ) {
+	.layout-contents {
+		float: right;
+		margin: 0 auto;
+		padding: 0;
+		width: 790px;
+	}
+	.layout-sidebar {
+		float: left;
+		margin: 0 auto;
+		padding: 0 5px;
+		width: 300px;
+	}
 }
 
 /**
@@ -289,18 +307,34 @@ optgroup {
 
 .layout-container-list li {
 	border: solid 1px #ddd;
+	box-sizing: border-box;
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
-	margin: 0 5px 5px 0;
+	margin: 0 0 10px 0;
 	padding: 5px;
 	vertical-align: top;
-	width: 238px;
+	width: 100%;
+}
+
+@media screen and ( min-width: 768px ) {
+	.layout-container-list li {
+		margin: 0 .5% 10px .5%;
+		width: 49%;
+	}
+}
+
+@media screen and ( min-width: 1100px ) {
+	.layout-container-list li {
+		margin: 0 .5% 5px .5%;
+		width: 32%;
+	}
 }
 
 .layout-container-list section {
 	width: 100%;
 }
+
 .layout-container-list .wp-post-image {
 	height: auto;
 	width: auto;
@@ -456,18 +490,25 @@ optgroup {
 /**
  * Posts parts
  */
-.post img {
-	height: auto;
-	width: auto;
-	max-width: 100%;
-	max-height: 100%;
+.post .post-title {
+	font-size: 1.5em;
+	margin: 10px 0;
 }
 
+.post .post-meta {
+	list-style: none;
+	margin: 0 0 10px 0;
+	padding: 0;
+}
+
+.post .post-tags,
 .post .post-modified-time,
 .post .post-time {
 	font-size: .8em;
 	margin: 0 10px 0 0;
 }
+
+.post .post-tags::before,
 .post .post-modified-time::before,
 .post .post-time::before {
 	display: inline-block;
@@ -476,11 +517,60 @@ optgroup {
 	vertical-align: middle;
 }
 
+.post .post-tags::before {
+	content: "\f323";
+}
+
 .post .post-modified-time::before {
 	content: "\f321";
 }
+
 .post .post-time::before {
 	content: "\f469";
+}
+
+.post img {
+	height: auto;
+	width: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+/**
+ * Author parts
+ */
+.author-info {
+	border: solid 1px #ddd;
+	margin: 10px 0;
+	padding: 10px;
+}
+
+.author-info .author-avatar {
+	display: table-cell;
+	width: 80px;
+}
+
+.author-info .author-description {
+	display: table-cell;
+}
+
+.author-info .avatar {
+	border-radius: 50%;
+	height: 60px;
+	margin: 0 5px 0 0;
+	vertical-align: top;
+	width: 60px;
+}
+
+.author-info .author-title{
+	font-size: 1em;
+	margin: 0 0 10px 0;
+}
+
+.author-info .author-biography {
+	font-size: .8em;
+	margin: 0;
+	padding: 0;
 }
 
 /**
@@ -512,6 +602,20 @@ optgroup {
 	padding: 10px;
 }
 
+.comment-wrapper .children .comment::before {
+	content: "\f473";
+	display: inline-block;
+	font: 1.2em 'dashicons';
+	margin: -.2em 2px 0 0;
+	vertical-align: middle;
+}
+
+.comment-wrapper .children .comment {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
 .comment-wrapper .avatar {
 	border-radius: 50%;
 	height: 42px;
@@ -539,6 +643,10 @@ optgroup {
 	font: 1.2em 'dashicons';
 	margin: -.2em 2px 0 0;
 	vertical-align: middle;
+}
+
+.comment-wrapper .comment-close {
+	font-size: 1em;
 }
 
 .comment-respond .comment-respond-title {
@@ -600,7 +708,7 @@ optgroup {
 
 .comment-respond input[type=submit] {
 	background: #333;
-	border-radius: 0;
+	border-radius: 5px;
 	border: none;
 	box-sizing: border-box;
 	color: #fff;
@@ -611,4 +719,130 @@ optgroup {
 .comment-respond input[type=submit]:hover {
 	background: #666;
 	transition: all .3s;
+}
+
+/**
+ * Post Navigation parts
+ */
+.post-navigation .screen-reader-text {
+	font-size: 1em;
+	margin: 20px 0 10px 0;
+}
+
+.post-navigation .screen-reader-text::before {
+	content: "\f229";
+	display: inline-block;
+	font: 1.2em 'dashicons';
+	margin: -.2em 2px 0 0;
+	vertical-align: middle;
+}
+
+.post-navigation .nav-links {
+	display: -webkit-flex;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	-webkit-flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: flex-start;
+}
+
+.post-navigation .nav-previous,
+.post-navigation .nav-next {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	box-sizing: border-box;
+	font-size: .8em;
+	width: 49.5%;
+}
+
+.post-navigation .nav-previous {
+	margin: 0 .5% 0 0;
+	text-align: left;
+}
+
+.post-navigation .nav-next {
+	margin: 0 0 0 .5%;
+	text-align: right;
+}
+
+.post-navigation .nav-previous a,
+.post-navigation .nav-next a {
+	background: #333;
+	border-radius: 5px;
+	color: #fff;
+	display: block;
+	padding: 10px 5px;
+	text-decoration: none;
+	width: 100%;
+}
+
+.post-navigation .nav-previous a:hover,
+.post-navigation .nav-next a:hover {
+	background: #666;
+	transition: all .3s;
+}
+
+.post-navigation .nav-previous a::before {
+	content: "\f141";
+	display: inline-block;
+	font: 1.2em 'dashicons';
+	margin: -.2em 2px 0 0;
+	vertical-align: middle;
+}
+
+.post-navigation .nav-next a::after {
+	content: "\f139";
+	display: inline-block;
+	font: 1.2em 'dashicons';
+	margin: -.2em 2px 0 0;
+	vertical-align: middle;
+}
+
+/**
+ * Search parts
+ */
+.search-result .search-result-title {
+	font-size: 1.2em;
+}
+
+.search-result article {
+	border: solid 1px #ddd;
+	margin: 0 0 10px 0;
+	padding: 5px 10px 0 10px;
+}
+
+.search-result .search-result-title::before {
+	content: "\f179";
+	display: inline-block;
+	font: 1.2em 'dashicons';
+	margin: -.2em 2px 0 0;
+	vertical-align: middle;
+}
+
+.search-result .search-result-post-title {
+	font-size: 1.2em;
+	margin: 0 0 5px 0;
+}
+
+.search-result .search-result-post-excerpt {
+	font-size: .8em;
+}
+
+/**
+ * Archive parts
+ */
+.archive-wrapper .archive-title {
+	font-size: 1.5em;
+	margin: 10px 0;
+}
+
+.archive-wrapper .archive-description {
+	font-size: .8em;
+	margin: 10px 0;
 }

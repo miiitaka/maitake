@@ -9,9 +9,9 @@
 get_header(); ?>
 
 <?php if ( have_posts() ) : ?>
-	<section>
+	<section class="search-result">
 		<header>
-			<h1><?php printf( 'Search Results for: %s', esc_html( get_search_query() ) ); ?></h1>
+			<h1 class="search-result-title"><?php printf( 'Search Results for: %s', esc_html( get_search_query() ) ); ?></h1>
 		</header>
 
 		<?php

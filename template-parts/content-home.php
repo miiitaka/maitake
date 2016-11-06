@@ -26,6 +26,6 @@
 		</p>
 	</footer>
 	<div class="list-post-excerpt">
-		<?php esc_html( the_excerpt() ); ?>
+		<?php the_excerpt(); ?>
 	</div>
 </article>

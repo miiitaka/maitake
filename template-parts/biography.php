@@ -1,0 +1,28 @@
+<?php
+/**
+ * The template part for displaying an Author biography
+ *
+ * @package    WordPress
+ * @subpackage Maitake
+ * @since      1.0.0
+ */
+?>
+
+<div class="author-info">
+	<div class="author-avatar">
+		<a class="author-link" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>">
+			<?php
+				echo get_avatar( get_the_author_meta( 'user_email' ), 60 );
+			?>
+		</a>
+	</div>
+
+	<div class="author-description">
+		<h2 class="author-title">
+			Author: <?php the_author(); ?>
+		</h2>
+		<p class="author-biography">
+			<?php the_author_meta( 'description' ); ?>
+		</p>
+	</div>
+</div>
