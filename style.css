@@ -370,6 +370,7 @@ optgroup {
  */
 .widget {
 	font-size: .8em;
+	word-break: break-all;
 }
 
 .widget ul {
