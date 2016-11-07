@@ -19,10 +19,10 @@
 
 	<div class="author-description">
 		<h2 class="author-title">
-			Author: <?php the_author(); ?>
+			Author:&nbsp;<?php esc_html( the_author() ); ?>
 		</h2>
 		<p class="author-biography">
-			<?php the_author_meta( 'description' ); ?>
+			<?php esc_html( the_author_meta( 'description' ) ); ?>
 		</p>
 	</div>
 </div>

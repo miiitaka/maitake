@@ -17,7 +17,7 @@
 	?>
 	<header>
 		<?php
-			the_title( sprintf( '<h2 class="list-post-title"><a href="%s">', esc_url( get_permalink() ) ), '</a></h2>' );
+			esc_html( the_title( sprintf( '<h2 class="list-post-title"><a href="%s">', esc_url( get_permalink() ) ), '</a></h2>' ) );
 		?>
 	</header>
 	<footer>
