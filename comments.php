@@ -12,26 +12,28 @@ if ( post_password_required() ) {
 ?>
 <section class="comment-wrapper">
 	<?php if ( have_comments() ) : ?>
-		<h2 class="comment-feedback">
-			<?php
-				$comments_number = get_comments_number();
-				if ( 1 === $comments_number ) {
-					printf( 'One thought on &ldquo;%s&rdquo;comments title', get_the_title() );
-				} else {
-					printf(
-						_nx(
-							'%1$s thought on &ldquo;%2$s&rdquo;',
-							'%1$s thoughts on &ldquo;%2$s&rdquo;',
-							$comments_number,
-							'comments title',
-							'twentysixteen'
-						),
-						number_format_i18n( $comments_number ),
-						get_the_title()
-					);
-				}
-			?>
-		</h2>
+		<header>
+			<h2 class="comment-feedback">
+				<?php
+					$comments_number = get_comments_number();
+					if ( 1 === $comments_number ) {
+						printf( 'One thought on &ldquo;%s&rdquo;comments title', get_the_title() );
+					} else {
+						printf(
+							_nx(
+								'%1$s thought on &ldquo;%2$s&rdquo;',
+								'%1$s thoughts on &ldquo;%2$s&rdquo;',
+								$comments_number,
+								'comments title',
+								'twentysixteen'
+							),
+							number_format_i18n( $comments_number ),
+							get_the_title()
+						);
+					}
+				?>
+			</h2>
+		</header>
 
 		<?php the_comments_navigation(); ?>
 

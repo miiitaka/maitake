@@ -376,6 +376,10 @@ optgroup {
 	padding-left: 30px;
 }
 
+.widget img {
+	max-width: 100%;
+}
+
 .widget-title {
 	font-size: 1.2em;
 }
@@ -706,7 +710,7 @@ optgroup {
 }
 
 .comment-wrapper .comment-reply-link {
-	font-size: 1em;
+	font-size: .8em;
 }
 
 .comment-wrapper .comment-reply-link::before {
@@ -780,12 +784,13 @@ optgroup {
 
 .comment-respond input[type=submit] {
 	background: #333;
-	border-radius: 5px;
 	border: none;
 	box-sizing: border-box;
 	color: #fff;
 	cursor: pointer;
-	padding: 5px 10px;
+	font-size: .8em;
+	padding: 10px;
+	width: 100%;
 }
 
 .comment-respond input[type=submit]:hover {
