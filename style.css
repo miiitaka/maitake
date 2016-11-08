@@ -260,6 +260,24 @@ optgroup {
 	}
 }
 
+.layout-footer {
+	border-top: solid 1px #ddd;
+	clear: both;
+	width: 100%;
+}
+
+.layout-footer-global {
+	margin: 0 auto;
+	max-width: 1080px;
+	padding: 10px;
+}
+
+.layout-footer-global span {
+	display: block;
+	font-size: .8em;
+	text-align: center;
+}
+
 /**
  * Section Header Navigation
  */
