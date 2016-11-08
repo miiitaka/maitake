@@ -370,6 +370,7 @@ optgroup {
  */
 .widget {
 	font-size: .8em;
+	padding: 0 0 5px 0;
 	word-break: break-all;
 }
 
@@ -382,7 +383,9 @@ optgroup {
 }
 
 .widget-title {
+	border-bottom: 1px solid #333;
 	font-size: 1.2em;
+	padding: 0 0 3px 0;
 }
 
 .widget-title::before {
