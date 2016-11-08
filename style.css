@@ -206,6 +206,18 @@ optgroup {
 }
 
 /**
+ * Accessibility
+ */
+/* Text meant only for screen readers */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+/**
  * Section Layout
  */
 .layout-header {
@@ -260,6 +272,24 @@ optgroup {
 	}
 }
 
+.layout-footer {
+	border-top: solid 1px #ddd;
+	clear: both;
+	width: 100%;
+}
+
+.layout-footer-global {
+	margin: 0 auto;
+	max-width: 1080px;
+	padding: 10px;
+}
+
+.layout-footer-global span {
+	display: block;
+	font-size: .8em;
+	text-align: center;
+}
+
 /**
  * Section Header Navigation
  */
@@ -286,6 +316,35 @@ optgroup {
 
 .layout-header-nav .sub-menu {
 	display: none;
+}
+
+/**
+ * Section Navigation Pagination
+ */
+.pagination {
+	margin: 10px 0;
+	text-align: center;
+}
+
+.pagination a,
+.pagination span {
+	padding: 5px;
+}
+
+.pagination .prev::before {
+	content: "\f141";
+	display: inline-block;
+	font: 1.2em 'dashicons';
+	margin: -.2em 2px 0 0;
+	vertical-align: middle;
+}
+
+.pagination .next::after {
+	content: "\f139";
+	display: inline-block;
+	font: 1.2em 'dashicons';
+	margin: -.2em 2px 0 0;
+	vertical-align: middle;
 }
 
 /**
@@ -370,6 +429,7 @@ optgroup {
  */
 .widget {
 	font-size: .8em;
+	padding: 0 0 5px 0;
 	word-break: break-all;
 }
 
@@ -382,7 +442,9 @@ optgroup {
 }
 
 .widget-title {
+	border-bottom: 1px solid #333;
 	font-size: 1.2em;
+	padding: 0 0 3px 0;
 }
 
 .widget-title::before {
