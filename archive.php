@@ -26,14 +26,7 @@ get_header(); ?>
 			<?php endwhile; ?>
 		</ul>
 
-		<?php
-			the_posts_pagination( array(
-				'prev_text'          => 'Previous',
-				'next_text'          => 'Next',
-				'before_page_number' => '',
-				'screen_reader_text' => ''
-			) );
-		?>
+		<?php get_template_part( 'template-parts/pagination' ); ?>
 	</section>
 <?php else : ?>
 	<?php get_template_part( 'template-parts/content', 'none' ); ?>
