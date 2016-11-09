@@ -9,7 +9,7 @@
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header>
-		<?php the_title( '<h1>', '</h1>' ); ?>
+		<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
 	</header>
 
 	<?php the_post_thumbnail( 'post-thumbnail', array( 'alt' => the_title_attribute( 'echo=0' ) ) ); ?>
