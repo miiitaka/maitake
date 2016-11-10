@@ -18,12 +18,12 @@ Use it to make something cool, have fun, and share what you've learned with othe
  * Reset Style Sheet
  */
 html {
-	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
 }
 
 body {
+	font-size: 1em;
 	margin: 0;
 }
 
@@ -262,13 +262,13 @@ optgroup {
 		float: right;
 		margin: 0 auto;
 		padding: 0;
-		width: 790px;
+		width: 800px;
 	}
 	.layout-sidebar {
 		float: left;
 		margin: 0 auto;
 		padding: 0 5px;
-		width: 300px;
+		width: 290px;
 	}
 }
 
@@ -371,7 +371,7 @@ optgroup {
 	display: -webkit-flex;
 	display: flex;
 	margin: 0 0 10px 0;
-	padding: 5px;
+	padding: 10px;
 	vertical-align: top;
 	width: 100%;
 }
@@ -399,17 +399,19 @@ optgroup {
 	width: auto;
 	max-width: 100%;
 	max-height: 100%;
+	margin: 0 0 10px 0;
 }
 
 .layout-container-list .list-post-title {
 	font-size: 1em;
-	margin: 0 0 5px 0;
+	line-height: 1.5;
+	margin: 0 0 10px 0;
 	word-break: break-all;
 }
 
 .layout-container-list .list-post-time {
 	font-size: .8em;
-	margin: 0;
+	margin: 0 0 10px 0;
 }
 
 .layout-container-list .list-post-time time::before {
@@ -420,7 +422,7 @@ optgroup {
 	vertical-align: middle;
 }
 
-.layout-container-list .list-post-excerpt {
+.layout-container-list .list-post-categories {
 	font-size: .8em;
 }
 
@@ -434,6 +436,7 @@ optgroup {
 }
 
 .widget ul {
+	line-height: 1.5;
 	padding-left: 30px;
 }
 
@@ -586,7 +589,7 @@ optgroup {
 
 .widget_search input[type=search] {
 	margin: 0 5%;
-	padding: 4px;
+	padding: 9px;
 	width: 90%;
 }
 
@@ -597,7 +600,7 @@ optgroup {
 	color: #fff;
 	cursor: pointer;
 	margin: 5px 5%;
-	padding: 5px 10px;
+	padding: 10px;
 	width: 90%;
 }
 
@@ -612,6 +615,7 @@ optgroup {
 }
 
 .widget_tag_cloud .tagcloud {
+	line-height: 1.5;
 	margin: 0 5%;
 	width: 90%;
 }
@@ -622,6 +626,7 @@ optgroup {
 }
 
 .widget_text .textwidget {
+	line-height: 1.5;
 	margin: 0 5%;
 	width: 90%;
 }
@@ -629,6 +634,10 @@ optgroup {
 /**
  * Posts parts
  */
+.post {
+	line-height: 1.5;
+}
+
 .post .post-title {
 	font-size: 1.5em;
 	margin: 10px 0;
@@ -690,6 +699,10 @@ optgroup {
 /**
  * Pages parts
  */
+ .page {
+	line-height: 1.5;
+}
+
 .page .page-title {
 	font-size: 1.5em;
 	margin: 10px 0;
@@ -958,7 +971,6 @@ optgroup {
 .post-navigation .nav-previous a,
 .post-navigation .nav-next a {
 	background: #333;
-	border-radius: 5px;
 	color: #fff;
 	display: block;
 	padding: 10px 5px;

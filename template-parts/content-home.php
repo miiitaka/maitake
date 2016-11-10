@@ -25,7 +25,7 @@
 			<time><?php the_modified_time( get_option( 'date_format' ) ); ?></time>
 		</p>
 	</footer>
-	<div class="list-post-excerpt">
-		<?php the_excerpt(); ?>
+	<div class="list-post-categories">
+		<?php the_category(' '); ?>
 	</div>
 </article>
