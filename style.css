@@ -262,13 +262,13 @@ optgroup {
 		float: right;
 		margin: 0 auto;
 		padding: 0;
-		width: 790px;
+		width: 800px;
 	}
 	.layout-sidebar {
 		float: left;
 		margin: 0 auto;
 		padding: 0 5px;
-		width: 300px;
+		width: 290px;
 	}
 }
 
