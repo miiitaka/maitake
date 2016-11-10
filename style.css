@@ -18,12 +18,12 @@ Use it to make something cool, have fun, and share what you've learned with othe
  * Reset Style Sheet
  */
 html {
-	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
 }
 
 body {
+	font-size: 1em;
 	margin: 0;
 }
 
@@ -434,6 +434,7 @@ optgroup {
 }
 
 .widget ul {
+	line-height: 1.5;
 	padding-left: 30px;
 }
 
@@ -612,6 +613,7 @@ optgroup {
 }
 
 .widget_tag_cloud .tagcloud {
+	line-height: 1.5;
 	margin: 0 5%;
 	width: 90%;
 }
@@ -622,6 +624,7 @@ optgroup {
 }
 
 .widget_text .textwidget {
+	line-height: 1.5;
 	margin: 0 5%;
 	width: 90%;
 }
