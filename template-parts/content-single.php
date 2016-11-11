@@ -15,8 +15,8 @@
 				<li class="post-tags"><?php the_tags( "" ); ?></li>
 			<?php endif; ?>
 			<li>
-				<time class="post-modified-time">最終更新日&nbsp;:&nbsp;<?php the_modified_time( get_option( 'date_format' ) ); ?></time>
-				<time class="post-time">記事公開日&nbsp;:&nbsp;<?php the_time( get_option( 'date_format' ) ); ?></time>
+				<time class="post-modified-time">Update date&nbsp;:&nbsp;<?php the_modified_time( get_option( 'date_format' ) ); ?></time>
+				<time class="post-time">Release date&nbsp;:&nbsp;<?php the_time( get_option( 'date_format' ) ); ?></time>
 			</li>
 		</ul>
 	</header>

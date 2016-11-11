@@ -7,7 +7,7 @@ Author URI: https://github.com/miiitaka
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags:
+Tags: white
 Text Domain: maitake
 
 This theme, like WordPress, is licensed under the GPL.
@@ -215,6 +215,64 @@ optgroup {
 	height: 1px;
 	width: 1px;
 	overflow: hidden;
+}
+
+/**
+ * Captions
+ */
+.wp-caption,
+.gallery-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin: 0;
+}
+
+.wp-caption .wp-caption-text {
+	color: #333;
+}
+
+/**
+ * align
+ */
+.alignright {
+    float: right;
+    margin: 5px 0 10px 10px;
+}
+
+.alignleft {
+    float: left;
+    margin: 5px 10px 10px 0;
+}
+
+.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+/**
+ * By Post Author
+ */
+.bypostauthor {
+    background: mediumslateblue;
+}
+
+/**
+ * Sticky
+ */
+.sticky {
+
+}
+
+/**
+ * Default Elements
+ */
+body {
+	background: #fff;
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 }
 
 /**
