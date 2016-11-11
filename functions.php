@@ -12,7 +12,7 @@
  */
 
 /**
- * テーマのセットアップ
+ * Theme Setup
  *
  * @since 1.0.0
  * @link  https://developer.wordpress.org/reference/functions/add_theme_support/#post-thumbnails
@@ -40,7 +40,7 @@ function maitake_setup() {
 	) );
 
 	/**
-	 * 投稿フォーマットのサポート
+	 * Post Formats Support
 	 * @see: https://codex.wordpress.org/Post_Formats
 	 */
 	add_theme_support( 'post-formats', array(
@@ -55,7 +55,10 @@ function maitake_setup() {
 		'chat'
 	) );
 
-	// 投稿・固定ページなどにサムネイルを登録できる画像サイズを指定
+	// Indicate widget sidebars can use selective refresh in the Customizer.
+	add_theme_support( 'customize-selective-refresh-widgets' );
+
+	// Thumbnails Size Set
 	set_post_thumbnail_size( 1200, 9999 );
 
 	// This theme uses wp_nav_menu() in two locations.
@@ -66,33 +69,33 @@ function maitake_setup() {
 add_action( 'after_setup_theme', 'maitake_setup' );
 
 /**
- * wp_head() で自動追加される要素を削除
+ * wp_head() remove
  *
  * @since 1.0.0
  */
 function maitake_remove_action_head() {
-	// WordPress のバージョン情報
+	// WordPress version information
 	remove_action( 'wp_head', 'wp_generator' );
 
-	// wlwmanifest のアドレス（ Windows Live Writer を使用して WordPress に記事を投稿するときのアドレス）
+	// wlwmanifest address（ Windows Live Writer for WordPress ）
 	remove_action( 'wp_head', 'wlwmanifest_link' );
 
-	// EditURI のアドレス（外部ツールを使用して WordPress に記事を投稿するときのアドレス）
+	// EditURI address
 	remove_action( 'wp_head', 'rsd_link' );
 
-	// REST API 用 URL
+	// REST API URL
 	remove_action( 'wp_head', 'rest_output_link_wp_head');
 
-	// 絵文字の DNS prefetch 指定を削除
+	// emoji DNS prefetch
 	add_filter( 'emoji_svg_url', '__return_false' );
 
-	// 絵文字の script 要素と style 要素を削除
+	// emoji script and style remove
 	remove_action( 'wp_head',             'print_emoji_detection_script', 7 );
 	remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
 	remove_action( 'wp_print_styles',     'print_emoji_styles' );
 	remove_action( 'admin_print_styles',  'print_emoji_styles' );
 
-	// oEmbed 埋め込み機能
+	// oEmbed
 	remove_action( 'wp_head', 'rest_output_link_wp_head' );
 	remove_action( 'wp_head', 'wp_oembed_add_discovery_links' );
 	remove_action( 'wp_head', 'wp_oembed_add_host_js' );
@@ -100,7 +103,7 @@ function maitake_remove_action_head() {
 add_action( 'after_setup_theme', 'maitake_remove_action_head' );
 
 /**
- * ウィジェットエリアの登録
+ * Widget Area Register
  *
  * @since 1.0.0
  * @link  https://developer.wordpress.org/reference/functions/register_sidebar/
@@ -119,7 +122,7 @@ function maitake_widgets_init() {
 add_action( 'widgets_init', 'maitake_widgets_init' );
 
 /**
- * scripts 要素 styles 要素の追加
+ * scripts and styles add
  *
  * @since 1.0.0
  */
@@ -129,5 +132,10 @@ function maitake_scripts() {
 
 	// Theme stylesheet.
 	wp_enqueue_style( 'maitake-style', get_stylesheet_uri() );
+
+	// Comment Reply
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
 }
 add_action( 'wp_enqueue_scripts', 'maitake_scripts' );
