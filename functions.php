@@ -58,6 +58,10 @@ function maitake_setup() {
 	// Indicate widget sidebars can use selective refresh in the Customizer.
 	add_theme_support( 'customize-selective-refresh-widgets' );
 
+	/**
+	 * Custom Header Support
+	 * @see: https://codex.wordpress.org/Custom_Headers
+	 */
 	$args = array(
 		'default-image'          => '',
 		'random-default'         => false,
