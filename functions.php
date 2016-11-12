@@ -72,11 +72,27 @@ function maitake_setup() {
 		'default-text-color'     => '',
 		'header-text'            => true,
 		'uploads'                => true,
-		'wp-head-callback'       => '__return_false',
+		'wp-head-callback'       => '_custom_background_cb',
 		'admin-head-callback'    => '__return_false',
 		'admin-preview-callback' => '__return_false',
 	);
 	add_theme_support( 'custom-header', $args );
+
+	/**
+	 * Custom Background Support
+	 * @see: https://codex.wordpress.org/Custom_Backgrounds
+	 */
+	$args = array(
+		'default-color'          => 'ffffff',
+		'default-image'          => '',
+		'default-repeat'         => '',
+		'default-position-x'     => '',
+		'default-attachment'     => '',
+		'wp-head-callback'       => '__return_false',
+		'admin-head-callback'    => '__return_false',
+		'admin-preview-callback' => '__return_false'
+	);
+	add_theme_support( 'custom-background', $args );
 
 	// Thumbnails Size Set
 	set_post_thumbnail_size( 1200, 9999 );
