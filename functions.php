@@ -58,6 +58,22 @@ function maitake_setup() {
 	// Indicate widget sidebars can use selective refresh in the Customizer.
 	add_theme_support( 'customize-selective-refresh-widgets' );
 
+	$args = array(
+		'default-image'          => '',
+		'random-default'         => false,
+		'width'                  => 0,
+		'height'                 => 0,
+		'flex-height'            => false,
+		'flex-width'             => false,
+		'default-text-color'     => '',
+		'header-text'            => true,
+		'uploads'                => true,
+		'wp-head-callback'       => '__return_false',
+		'admin-head-callback'    => '__return_false',
+		'admin-preview-callback' => '__return_false',
+	);
+	add_theme_support( 'custom-header', $args );
+
 	// Thumbnails Size Set
 	set_post_thumbnail_size( 1200, 9999 );
 
