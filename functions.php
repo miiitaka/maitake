@@ -72,7 +72,7 @@ function maitake_setup() {
 		'default-text-color'     => '',
 		'header-text'            => true,
 		'uploads'                => true,
-		'wp-head-callback'       => '_custom_background_cb',
+		'wp-head-callback'       => '__return_false',
 		'admin-head-callback'    => '__return_false',
 		'admin-preview-callback' => '__return_false',
 	);
@@ -88,7 +88,7 @@ function maitake_setup() {
 		'default-repeat'         => '',
 		'default-position-x'     => '',
 		'default-attachment'     => '',
-		'wp-head-callback'       => '__return_false',
+		'wp-head-callback'       => '_custom_background_cb',
 		'admin-head-callback'    => '__return_false',
 		'admin-preview-callback' => '__return_false'
 	);
