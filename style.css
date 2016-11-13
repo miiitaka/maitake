@@ -232,7 +232,7 @@ optgroup {
 }
 
 .wp-caption .wp-caption-text {
-	color: #333;
+
 }
 
 /**
@@ -271,6 +271,8 @@ optgroup {
  * Default Elements
  */
 body {
+	background: #fff;
+	color: #333;
 	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 }
 
@@ -278,6 +280,7 @@ body {
  * Section Layout
  */
 .layout-header {
+	background: #ebebeb;
 	border-bottom: solid 1px #ddd;
 	width: 100%;
 }
@@ -330,6 +333,7 @@ body {
 }
 
 .layout-footer {
+	background: #ebebeb;
 	border-top: solid 1px #ddd;
 	clear: both;
 	width: 100%;
