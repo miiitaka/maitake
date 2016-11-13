@@ -13,7 +13,17 @@ get_header(); ?>
 	<section class="archive-wrapper">
 		<header>
 			<?php
-				the_archive_title( '<h1 class="archive-title">', '</h1>' );
+				if ( is_author() ) {
+					the_archive_title( '<h1 class="archive-title author-title">', '</h1>' );
+				} elseif ( is_category() ) {
+					the_archive_title( '<h1 class="archive-title category-title">', '</h1>' );
+				} elseif ( is_date() ) {
+					the_archive_title( '<h1 class="archive-title date-title">', '</h1>' );
+				} elseif ( is_tag() ) {
+					the_archive_title( '<h1 class="archive-title tag-title">', '</h1>' );
+				} else {
+					the_archive_title( '<h1 class="archive-title">', '</h1>' );
+				}
 				the_archive_description( '<div class="archive-description">', '</div>' );
 			?>
 		</header>

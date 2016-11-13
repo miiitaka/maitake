@@ -8,13 +8,19 @@
  */
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header>
+	<?php
+		if ( ( function_exists( 'has_post_thumbnail' ) ) && ( has_post_thumbnail() ) ) {
+			echo '<figure class="post-thumbnail">';
+			the_post_thumbnail ( 'full', array( 'alt' => the_title_attribute ( 'echo=0' ) ) );
+			echo '</figure>';
+		}
+	?>
+
+	<header class="page-header">
 		<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
 	</header>
 
-	<?php the_post_thumbnail( 'post-thumbnail', array( 'alt' => the_title_attribute( 'echo=0' ) ) ); ?>
-
-	<div>
+	<div class="page-content">
 		<?php
 			the_content();
 			wp_link_pages( array(

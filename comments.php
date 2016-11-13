@@ -10,7 +10,20 @@ if ( post_password_required() ) {
 	return;
 }
 ?>
-<section class="comment-wrapper">
+<section class="comment-form-wrapper">
+	<?php if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
+		<p>Comments are closed.</p>
+	<?php endif; ?>
+
+	<?php
+		comment_form( array(
+			'title_reply_before' => '<h2 class="comment-respond-title">',
+			'title_reply_after'  => '</h2>',
+		) );
+	?>
+</section>
+
+<section class="comment-list-wrapper">
 	<?php if ( have_comments() ) : ?>
 		<header>
 			<h2 class="comment-feedback">
@@ -49,15 +62,4 @@ if ( post_password_required() ) {
 
 		<?php the_comments_navigation(); ?>
 	<?php endif; ?>
-
-	<?php if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
-		<p>Comments are closed.</p>
-	<?php endif; ?>
-
-	<?php
-		comment_form( array(
-			'title_reply_before' => '<h2 class="comment-respond-title">',
-			'title_reply_after'  => '</h2>',
-		) );
-	?>
 </section>

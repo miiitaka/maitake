@@ -8,28 +8,28 @@
  */
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header>
+	<?php
+		if ( ( function_exists( 'has_post_thumbnail' ) ) && ( has_post_thumbnail() ) ) {
+			echo '<figure class="post-thumbnail">';
+			the_post_thumbnail ( 'full', array( 'alt' => the_title_attribute ( 'echo=0' ) ) );
+			echo '</figure>';
+		}
+	?>
+
+	<header class="post-header">
 		<?php the_title( '<h1 class="post-title">', '</h1>' ); ?>
 		<ul class="post-meta">
-			<?php if ( has_tag() ) : ?>
-				<li class="post-tags"><?php the_tags( "" ); ?></li>
-			<?php endif; ?>
 			<li>
 				<time class="post-modified-time">Update date&nbsp;:&nbsp;<?php the_modified_time( get_option( 'date_format' ) ); ?></time>
 				<time class="post-time">Release date&nbsp;:&nbsp;<?php the_time( get_option( 'date_format' ) ); ?></time>
 			</li>
+			<?php if ( has_tag() ) : ?>
+				<li class="post-tags"><?php the_tags( "" ); ?></li>
+			<?php endif; ?>
 		</ul>
 	</header>
 
 	<div class="post-content">
-		<?php
-			if ( ( function_exists( 'has_post_thumbnail' ) ) && ( has_post_thumbnail() ) ) {
-				echo sprintf( '<figure><a href="%s">', esc_url ( get_permalink () ) );
-				the_post_thumbnail ( 'full', array( 'alt' => the_title_attribute ( 'echo=0' ) ) );
-				echo '</figure>';
-			}
-		?>
-
 		<?php
 			the_content();
 
