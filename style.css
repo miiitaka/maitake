@@ -327,7 +327,7 @@ body {
 	.layout-sidebar {
 		float: left;
 		margin: 0 auto;
-		padding: 0 5px;
+		padding: 0 10px;
 		width: 290px;
 	}
 }
@@ -448,7 +448,10 @@ body {
 }
 
 .layout-container-list li {
-	border: solid 1px #ddd;
+	background: #fff;
+	border: 0;
+	box-shadow: 0 1px 2px rgba(0,0,0,.1);
+	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -468,7 +471,7 @@ body {
 
 @media screen and ( min-width: 1100px ) {
 	.layout-container-list li {
-		margin: 0 .5% 5px .5%;
+		margin: 0 .5% 10px .5%;
 		width: 32%;
 	}
 }
