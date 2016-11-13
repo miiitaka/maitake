@@ -94,6 +94,19 @@ function maitake_setup() {
 	);
 	add_theme_support( 'custom-background', $args );
 
+	/**
+	 * Theme Logo Support
+	 * @see: https://codex.wordpress.org/Theme_Logo
+	 */
+	$args = array(
+	 	'height'      => 0,
+	 	'width'       => 0,
+	 	'flex-height' => true,
+	 	'flex-width'  => true,
+	 	'header-text' => array( 'site-title', 'site-description' )
+	);
+	 add_theme_support( 'custom-logo', $args );
+
 	// Thumbnails Size Set
 	set_post_thumbnail_size( 1200, 9999 );
 

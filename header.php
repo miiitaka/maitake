@@ -25,11 +25,18 @@
 				}
 
 				if ( get_header_image() ) {
-					$format .= '<a href="' . esc_url( home_url( '/' ) ) . '" class="layout-header-image">';
-					$format .= '<img src="' . get_header_image() . '" alt="' . esc_attr( get_bloginfo( 'name' ) ) . '">';
+					$format .= '<a href="' . esc_url( home_url( '/' ) ) . '">';
+					$format .= '<img src="' . get_header_image() . '" alt="' . esc_attr( get_bloginfo( 'name' ) ) . '" class="layout-header-image">';
 				} else {
-					$format .= '<a href="' . esc_url( home_url( '/' ) ) . '" class="layout-header-name">';
-					$format .= esc_html( get_bloginfo( 'name' ) );
+					$format .= '<a href="' . esc_url( home_url( '/' ) ) . '">';
+
+						if ( has_custom_logo() ) {
+							$custom_logo_id = get_theme_mod( 'custom_logo' );
+							$image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+							$format .= '<img src="' . $image[0] . '" alt="' . esc_attr( get_bloginfo( 'name' ) ) . '" class="layout-header-logo">';
+						} else {
+							$format .= '<span class="layout-header-name">' . esc_html( get_bloginfo( 'name' ) ) . '</span>';
+						}
 				}
 
 				if ( is_front_page() && is_home() ) {
