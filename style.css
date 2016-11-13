@@ -496,7 +496,7 @@ body {
 
 .layout-container-list .list-post-time {
 	font-size: .8em;
-	margin: 0 0 10px 0;
+	margin: 0;
 }
 
 .layout-container-list .list-post-time time::before {
@@ -509,6 +509,14 @@ body {
 
 .layout-container-list .list-post-categories {
 	font-size: .8em;
+}
+
+.layout-container-list .list-post-categories::before {
+	content: "\f203";
+	display: inline-block;
+	font: 1.2em 'dashicons';
+	margin: -.2em 2px 0 0;
+	vertical-align: middle;
 }
 
 /**
