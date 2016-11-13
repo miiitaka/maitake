@@ -271,7 +271,7 @@ optgroup {
  * Default Elements
  */
 body {
-	background: #fff;
+	background: #ebebeb;
 	color: #333;
 	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 }
@@ -322,7 +322,7 @@ body {
 		float: right;
 		margin: 0 auto;
 		padding: 0;
-		width: 800px;
+		width: 780px;
 	}
 	.layout-sidebar {
 		float: left;
@@ -513,14 +513,20 @@ body {
  * Widget common parts
  */
 .widget {
+	background: #fff;
+	border: 0;
+	box-shadow: 0 1px 2px rgba(0,0,0,.1);
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 	font-size: .8em;
+	margin: 0 0 10px 0;
 	padding: 0 0 5px 0;
 	word-break: break-all;
 }
 
 .widget ul {
 	line-height: 1.5;
-	padding-left: 30px;
+	padding: 0 10px 0 30px;
 }
 
 .widget img {
@@ -530,7 +536,8 @@ body {
 .widget-title {
 	border-bottom: 1px solid #333;
 	font-size: 1.2em;
-	padding: 0 0 3px 0;
+	padding: 10px 0;
+	margin: 0 10px 10px;
 }
 
 .widget-title::before {
