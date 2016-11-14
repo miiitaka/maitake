@@ -105,7 +105,15 @@ function maitake_setup() {
 	 	'flex-width'  => true,
 	 	'header-text' => array( 'site-title', 'site-description' )
 	);
-	 add_theme_support( 'custom-logo', $args );
+	add_theme_support( 'custom-logo', $args );
+
+	/**
+	 * Content Width Support
+	 * @see: https://codex.wordpress.org/Content_Width
+	 */
+	if ( ! isset( $content_width ) ) {
+		$content_width = 780;
+	}
 
 	// Thumbnails Size Set
 	set_post_thumbnail_size( 1200, 9999 );
