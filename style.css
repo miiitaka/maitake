@@ -542,7 +542,7 @@ body {
 	box-sizing: border-box;
 	font-size: .8em;
 	margin: 0 0 10px 0;
-	padding: 0 0 5px 0;
+	padding: 0 0 10px 0;
 	word-break: break-all;
 }
 
@@ -645,6 +645,19 @@ body {
 /* Recent Posts Widget */
 .widget_recent_entries .widget-title::before {
 	content: "\f109";
+}
+
+.widget_recent_entries .post-date {
+	display: block;
+	margin: 3px 0;
+}
+
+.widget_recent_entries .post-date::before {
+	content: "\f469";
+	display: inline-block;
+	font: 1.2em 'dashicons';
+	margin: -.2em 2px 0 0;
+	vertical-align: middle;
 }
 
 /* Meta Widget */
@@ -1143,16 +1156,16 @@ body {
 	display: -webkit-flex;
 	display: flex;
 	font-size: .8em;
-	width: 49.5%;
+	width: 50%;
 }
 
 .post-navigation .nav-previous {
-	margin: 0 .5% 0 0;
+	margin: 0;
 	text-align: left;
 }
 
 .post-navigation .nav-next {
-	margin: 0 0 0 .5%;
+	margin: 0;
 	text-align: right;
 }
 
@@ -1236,7 +1249,7 @@ body {
 .archive-wrapper .tag-title::before {
 	display: inline-block;
 	font: 1.2em 'dashicons';
-	margin: -.2em 2px 0 0;
+	margin: -.2em 5px 0 0;
 	vertical-align: middle;
 }
 
