@@ -310,7 +310,7 @@ body {
 }
 
 .layout-wrapper {
-	margin: 10px auto;
+	margin: 20px auto;
 	max-width: 1100px;
 }
 
@@ -339,7 +339,7 @@ body {
 		float: left;
 		margin: 0 auto;
 		padding: 0 10px;
-		width: 290px;
+		width: 310px;
 	}
 }
 
@@ -542,13 +542,13 @@ body {
 	box-sizing: border-box;
 	font-size: .8em;
 	margin: 0 0 10px 0;
-	padding: 0 0 10px 0;
+	padding: 10px 15px;
 	word-break: break-all;
 }
 
 .widget ul {
 	line-height: 1.5;
-	padding: 0 10px 0 30px;
+	padding: 0 0 0 20px;
 }
 
 .widget img {
@@ -558,8 +558,8 @@ body {
 .widget-title {
 	border-bottom: 1px solid #333;
 	font-size: 1.2em;
-	padding: 10px 0;
-	margin: 0 10px 10px;
+	padding: 5px 0;
+	margin: 0 0 10px 0;
 }
 
 .widget-title::before {
@@ -581,9 +581,8 @@ body {
 }
 
 .widget_archive select {
-	height: 1.8em;
-	margin: 0 5%;
-	width: 90%;
+	height: 2.8em;
+	width: 100%;
 }
 
 /* Calendar Widget */
@@ -592,8 +591,7 @@ body {
 }
 
 .widget_calendar table {
-	margin: 0 5%;
-	width: 90%;
+	width: 100%;
 }
 
 .widget_calendar table caption {
@@ -627,9 +625,8 @@ body {
 }
 
 .widget_categories select {
-	height: 1.8em;
-	margin: 0 5%;
-	width: 90%;
+	height: 2.8em;
+	width: 100%;
 }
 
 /* Custom Menu Widget */
@@ -712,9 +709,8 @@ body {
 }
 
 .widget_search input[type=search] {
-	margin: 0 5%;
-	padding: 9px;
-	width: 90%;
+	padding: 10px;
+	width: 100%;
 }
 
 .widget_search input[type=submit] {
@@ -723,9 +719,9 @@ body {
 	box-sizing: border-box;
 	color: #fff;
 	cursor: pointer;
-	margin: 5px 5%;
+	margin: 5px 0;
 	padding: 10px;
-	width: 90%;
+	width: 100%;
 }
 
 .widget_search input[type=submit]:hover {
@@ -740,8 +736,7 @@ body {
 
 .widget_tag_cloud .tagcloud {
 	line-height: 1.5;
-	margin: 0 5%;
-	width: 90%;
+	width: 100%;
 }
 
 /* Text Widget */
@@ -751,8 +746,7 @@ body {
 
 .widget_text .textwidget {
 	line-height: 1.5;
-	margin: 0 5%;
-	width: 90%;
+	width: 100%;
 }
 
 /**
@@ -773,7 +767,7 @@ body {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	margin: 0 0 15px 0;
-	padding: 5px 10px;
+	padding: 10px 10px 5px 10px;
 }
 
 .post-content {
@@ -782,14 +776,14 @@ body {
 	box-shadow: 0 1px 2px rgba(0,0,0,.1);
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	padding: 5px 10px;
+	padding: 10px 15px;
 }
 
 .post .post-title {
 	border-bottom: solid 1px #ccc;
 	font-size: 1.5em;
 	margin: 0 0 10px 0;
-	padding: 0 0 5px 0;
+	padding: 0 0 10px 0;
 }
 
 .post .post-meta {
@@ -859,7 +853,7 @@ body {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	margin: 0 0 15px 0;
-	padding: 5px 10px;
+	padding: 15px;
 }
 
 .page-header .page-title {
@@ -875,7 +869,7 @@ body {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	margin: 0 0 15px 0;
-	padding: 5px 10px;
+	padding: 15px;
 }
 
 .page img {
@@ -907,7 +901,7 @@ body {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	margin: 15px 0;
-	padding: 10px;
+	padding: 15px;
 }
 
 .author-info .author-avatar {
@@ -948,7 +942,7 @@ body {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	margin: 15px 0 10px;
-	padding: 10px;
+	padding: 15px;
 }
 
 .comment-form-wrapper .comment-close {
@@ -1040,8 +1034,7 @@ body {
 	box-shadow: 0 1px 2px rgba(0,0,0,.1);
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	margin: 0 0 10px 0;
-	padding: 10px;
+	padding: 15px 15px 5px 15px;
 }
 
 .comment-list-wrapper .comment-feedback {
@@ -1122,6 +1115,9 @@ body {
 /**
  * Post Navigation parts
  */
+.post-navigation {
+	margin: 10px 0 0 0;
+}
 .post-navigation .screen-reader-text {
 	font-size: 1em;
 	margin: 20px 0 10px 0;
