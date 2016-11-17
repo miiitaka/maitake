@@ -32,15 +32,7 @@
 	<div class="post-content">
 		<?php
 			the_content();
-
-			wp_link_pages( array(
-				'before'      => 'Pages:',
-				'after'       => '',
-				'link_before' => '<span>',
-				'link_after'  => '</span>',
-				'pagelink'    => 'Page',
-				'separator'   => ',',
-			) );
+			get_template_part( 'template-parts/link-pages' );
 		?>
 	</div>
 
