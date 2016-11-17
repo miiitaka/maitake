@@ -251,18 +251,18 @@ optgroup {
  * align
  */
 .alignright {
-    float: right;
-    margin: 5px 0 10px 10px;
+	float: right;
+	margin: 5px 0 10px 10px;
 }
 
 .alignleft {
-    float: left;
-    margin: 5px 10px 10px 0;
+	float: left;
+	margin: 5px 10px 10px 0;
 }
 
 .aligncenter {
-    display: block;
-    margin: 5px auto 5px auto;
+	display: block;
+	margin: 5px auto 5px auto;
 }
 
 /**
@@ -292,8 +292,8 @@ body {
  * Section Layout
  */
 .layout-header {
-	background: #ebebeb;
-	border-bottom: solid 1px #ddd;
+	background: #fff;
+	box-shadow: 0 1px 2px rgba(0,0,0,.1);
 	width: 100%;
 }
 
@@ -344,7 +344,7 @@ body {
 }
 
 .layout-footer {
-	background: #ebebeb;
+	background: #fff;
 	border-top: solid 1px #ddd;
 	clear: both;
 	width: 100%;
@@ -388,9 +388,11 @@ body {
  * Section Header Navigation
  */
 .layout-header-nav .menu {
+	border-left: dotted 1px #ddd;
+	box-sizing: border-box;
 	display: table;
 	font-size: .8em;
-	margin: 0;
+	margin: 5px 0;
 	padding: 0;
 	table-layout: fixed;
 	text-align: center;
@@ -398,6 +400,7 @@ body {
 }
 
 .layout-header-nav .menu > li {
+	border-right: dotted 1px #ddd;
 	display: table-cell;
 	vertical-align: middle;
 }
@@ -406,6 +409,10 @@ body {
 	display: block;
 	padding: 10px 0;
 	text-decoration: none;
+}
+
+.layout-header-nav .menu > li > a:hover {
+	background: #ddd;
 }
 
 .layout-header-nav .sub-menu {
