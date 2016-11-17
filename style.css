@@ -1017,6 +1017,44 @@ body {
 }
 
 /**
+ * Link Pages
+ */
+.post-link-pages {
+	border-top: solid 1px #ddd;
+	margin: 20px 0 0 0;
+	padding: 10px 0;
+	text-align: center;
+}
+
+.post-link-pages span {
+	background: #ebebeb;
+	border: solid 1px #ddd;
+	display: inline-block;
+	margin: 0 5px;
+	text-align: center;
+	padding: 5px 10px;
+}
+
+.post-link-pages a {
+	border: solid 1px #ddd;
+	display: inline-block;
+	margin: 0 5px;
+	padding: 5px 10px;
+}
+
+.post-link-pages a:hover {
+	background: #ddd;
+	transition: all .3s;
+}
+
+.post-link-pages a span {
+	background: none;
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+/**
  * Author parts
  */
 .author-info {
