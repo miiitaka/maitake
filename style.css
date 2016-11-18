@@ -420,7 +420,7 @@ body {
 
 .layout-header-nav .menu > li > a:hover {
 	border-bottom-color: #393939;
-	transition: all .5s;
+	transition: all .15s ease-in-out;
 }
 
 .layout-header-nav .sub-menu {
