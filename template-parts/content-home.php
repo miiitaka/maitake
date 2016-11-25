@@ -26,6 +26,6 @@
 		</p>
 	</footer>
 	<div class="list-post-categories">
-		<?php the_category(' '); ?>
+		<?php the_category( ' ' ); ?>
 	</div>
 </article>
