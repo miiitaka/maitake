@@ -1025,6 +1025,23 @@ a {
 }
 
 /**
+ * Password Protect Post
+ */
+.post-password-form input[type=password] {
+	padding: 5px 10px;
+}
+
+.post-password-form input[type=submit] {
+	background: #393939;
+	border: none;
+	box-sizing: border-box;
+	color: #fff;
+	cursor: pointer;
+	margin: 5px 0;
+	padding: 7px 15px;
+}
+
+/**
  * Link Pages
  */
 .post-link-pages {
