@@ -1400,7 +1400,7 @@ a {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	margin: 0 0 10px 0;
-	padding: 5px 10px;
+	padding: 10px;
 }
 
 .search-result .search-result-title::before {

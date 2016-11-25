@@ -25,9 +25,13 @@
 	</div>
 
 	<?php if ( is_user_logged_in() ) : ?>
-		<footer>
+		<?php if ( get_post_type( get_the_ID() ) === 'page' ) : ?>
+			<footer class="page-footer">
+		<?php else : ?>
+			<footer class="post-footer">
+		<?php endif; ?>
 			<?php
-				edit_post_link( sprintf( 'Edit "%s"', get_the_title() ), '<p>', '</p>' );
+				edit_post_link( sprintf( 'Edit "%s"', get_the_title() ), '<span>', '</span>' );
 			?>
 		</footer>
 	<?php endif; ?>

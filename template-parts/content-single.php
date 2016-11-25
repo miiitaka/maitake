@@ -47,6 +47,6 @@
 			<?php
 				edit_post_link( sprintf( 'Edit "%s"', get_the_title() ), '<p>', '</p>' );
 			?>
-	</footer>
+		</footer>
 	<?php endif; ?>
 </article>
