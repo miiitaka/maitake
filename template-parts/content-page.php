@@ -27,15 +27,11 @@
 		?>
 	</div>
 
-	<?php
-		edit_post_link(
-			sprintf(
-				'Edit<span> "%s"</span>',
-				get_the_title()
-			),
-			'<footer><span>',
-			'</span></footer>'
-		);
-	?>
-
-</article><!-- #post-## -->
+	<?php if ( is_user_logged_in() ) : ?>
+		<footer class="page-footer">
+			<?php
+				edit_post_link( sprintf( 'Edit "%s"', get_the_title() ), '<p>', '</p>' );
+			?>
+		</footer>
+	<?php endif; ?>
+</article>

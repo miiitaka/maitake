@@ -27,11 +27,7 @@
 	<?php if ( is_user_logged_in() ) : ?>
 		<footer>
 			<?php
-			edit_post_link(
-				sprintf( 'Edit "%s"', get_the_title() ),
-				'<p>',
-				'</p>'
-			);
+				edit_post_link( sprintf( 'Edit "%s"', get_the_title() ), '<p>', '</p>' );
 			?>
 		</footer>
 	<?php endif; ?>
