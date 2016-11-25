@@ -435,13 +435,20 @@ a {
  * Section Navigation Pagination
  */
 .pagination {
-	margin: 10px 0;
+	margin: 20px 0;
 	text-align: center;
 }
 
 .pagination a,
 .pagination span {
-	padding: 5px;
+	padding: 5px 10px;
+}
+
+.pagination a:hover,
+.pagination span {
+	background: #393939;
+	color: #fff;
+	transition: all .3s;
 }
 
 .pagination .prev::before {

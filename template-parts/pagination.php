@@ -9,8 +9,9 @@
 ?>
 <?php
 the_posts_pagination( array(
-	'prev_text'          => 'Prev',
-	'next_text'          => 'Next',
 	'before_page_number' => '',
+	'next_text'          => 'Next',
+	'prev_text'          => 'Prev',
+	'show_all'           => __return_true(),
 	'screen_reader_text' => 'Post Navigation'
 ) );
