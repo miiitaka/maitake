@@ -196,3 +196,14 @@ function maitake_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'maitake_scripts' );
+
+/**
+ * hentry microformats.org remove.
+ *
+ * @since 1.0.0
+ */
+function theme_remove_hentry( $classes ) {
+	$classes = array_diff( $classes, array( 'hentry' ) );
+	return $classes;
+}
+add_filter( 'post_class','theme_remove_hentry' );
