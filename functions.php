@@ -18,13 +18,13 @@
  * @link  https://developer.wordpress.org/reference/functions/add_theme_support/#post-thumbnails
  */
 function maitake_setup() {
-	// 投稿・固定ページなどにサムネイルを登録できるようにする
+	// Add thumbnail.
 	add_theme_support( 'post-thumbnails' );
 
-	// head 要素内に投稿とコメントの feed URL を追加する
+	// Add post-feed, comment-feed.
 	add_theme_support( 'automatic-feed-links' );
 
-	// title 要素を head 要素に追加する
+	// Add title element.
 	add_theme_support( 'title-tag' );
 
 	/**
@@ -115,7 +115,7 @@ function maitake_setup() {
 		$content_width = 780;
 	}
 
-	// Thumbnails Size Set
+	// Set thumbnail size.
 	set_post_thumbnail_size( 1200, 9999 );
 
 	// This theme uses wp_nav_menu() in two locations.
