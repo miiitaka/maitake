@@ -131,28 +131,28 @@ add_action( 'after_setup_theme', 'maitake_setup' );
  * @since 1.0.0
  */
 function maitake_remove_action_head() {
-	// WordPress version information
+	// Remove WordPress version information.
 	remove_action( 'wp_head', 'wp_generator' );
 
-	// wlwmanifest address（ Windows Live Writer for WordPress ）
+	// Remove wlwmanifest address.（ Windows Live Writer for WordPress ）
 	remove_action( 'wp_head', 'wlwmanifest_link' );
 
-	// EditURI address
+	// Remove EditURI address.
 	remove_action( 'wp_head', 'rsd_link' );
 
-	// REST API URL
+	// Remove REST API URL.
 	remove_action( 'wp_head', 'rest_output_link_wp_head');
 
-	// emoji DNS prefetch
+	// Remove emoji DNS prefetch.
 	add_filter( 'emoji_svg_url', '__return_false' );
 
-	// emoji script and style remove
+	// Remove emoji script and style remove.
 	remove_action( 'wp_head',             'print_emoji_detection_script', 7 );
 	remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
 	remove_action( 'wp_print_styles',     'print_emoji_styles' );
 	remove_action( 'admin_print_styles',  'print_emoji_styles' );
 
-	// oEmbed
+	// Remove oEmbed.
 	remove_action( 'wp_head', 'rest_output_link_wp_head' );
 	remove_action( 'wp_head', 'wp_oembed_add_discovery_links' );
 	remove_action( 'wp_head', 'wp_oembed_add_host_js' );
@@ -184,13 +184,13 @@ add_action( 'widgets_init', 'maitake_widgets_init' );
  * @since 1.0.0
  */
 function maitake_scripts() {
-	// WordPress Dash Icon
+	// WordPress Dash Icon.
 	wp_enqueue_style( 'dashicons' );
 
 	// Theme stylesheet.
 	wp_enqueue_style( 'maitake-style', get_stylesheet_uri() );
 
-	// Comment Reply
+	// Comment Reply.
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
