@@ -115,6 +115,9 @@ function maitake_setup() {
 		$content_width = 780;
 	}
 
+	// Add editor style.
+	add_editor_style();
+
 	// Set thumbnail size.
 	set_post_thumbnail_size( 1200, 9999 );
 
