@@ -16,49 +16,60 @@
 </head>
 <body <?php body_class(); ?>>
 	<div class="layout-header">
-		<header class="layout-header-global">
-			<?php
-				if ( is_front_page() && is_home() ) {
-					$format = '<h1 class="layout-header-title">';
-				} else {
-					$format = '<p class="layout-header-title">';
-				}
+		<?php
+		$description = get_bloginfo( 'description', 'display' );
+		if ( $description || is_customize_preview() ) {
+			echo '<section class="layout-header-description">';
+			echo '<p>' . esc_html( $description ) . '</p>';
+			echo '</section>';
+		}
+		?>
 
-				if ( get_header_image() ) {
-					$format .= '<a href="' . esc_url( home_url( '/' ) ) . '">';
-					$format .= '<img src="' . get_header_image() . '" alt="' . esc_attr( get_bloginfo( 'name' ) ) . '" class="layout-header-image">';
-				} else {
-					$format .= '<a href="' . esc_url( home_url( '/' ) ) . '">';
-
-						if ( has_custom_logo() ) {
-							$custom_logo_id = get_theme_mod( 'custom_logo' );
-							$image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
-							$format .= '<img src="' . $image[0] . '" alt="' . esc_attr( get_bloginfo( 'name' ) ) . '" class="layout-header-logo">';
-						} else {
-							$format .= '<span class="layout-header-name">' . esc_html( get_bloginfo( 'name' ) ) . '</span>';
-						}
-				}
-
-				if ( is_front_page() && is_home() ) {
-					$format .= '</h1></a>';
-				} else {
-					$format .= '</p></a>';
-				}
+		<?php
+			if ( get_header_image() ) {
+				$format  = '<section class="layout-header-image">';
+				$format .= '<a href="' . esc_url( home_url( '/' ) ) . '">';
+				$format .= '<img src="' . get_header_image() . '" alt="' . esc_attr( get_bloginfo( 'name' ) ) . '">';
+				$format .= '</a></section>';
 				echo $format;
+			}
+		?>
+		<section class="layout-header-global">
+			<header class="layout-header-logo">
+				<?php
+					if ( is_front_page() && is_home() ) {
+						$format = '<h1 class="layout-header-title">';
+					} else {
+						$format = '<p class="layout-header-title">';
+					}
 
-				$description = get_bloginfo( 'description', 'display' );
-				if ( $description || is_customize_preview() ) {
-					echo '<p>' . esc_html( $description ) . '</p>';
-				}
-			?>
-		</header>
+					$format .= '<a href="' . esc_url( home_url( '/' ) ) . '">';
+
+					if ( has_custom_logo() ) {
+						$custom_logo_id = get_theme_mod( 'custom_logo' );
+						$image   = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+						$format .= '<img src="' . $image[0] . '" alt="' . esc_attr( get_bloginfo( 'name' ) ) . '" class="layout-header-logo">';
+					} else {
+						$format .= '<span class="layout-header-name">' . esc_html( get_bloginfo( 'name' ) ) . '</span>';
+					}
+
+					if ( is_front_page() && is_home() ) {
+						$format .= '</h1></a>';
+					} else {
+						$format .= '</p></a>';
+					}
+					echo $format;
+				?>
+			</header>
+		</section>
+
 
 		<?php if ( has_nav_menu( 'primary' ) ) : ?>
 			<nav class="layout-header-nav">
 				<?php
-					wp_nav_menu( array(
-						'theme_location' => 'primary'
-					) );
+				wp_nav_menu( array(
+					'theme_location' => 'primary'
+				) );
 				?>
 			</nav>
 		<?php endif; ?>
