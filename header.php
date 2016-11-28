@@ -61,6 +61,7 @@
 					echo $format;
 				?>
 			</header>
+			<?php do_action( 'layout-header-hook' ); ?>
 		</section>
 
 
@@ -76,5 +77,7 @@
 	</div>
 
 	<div class="layout-wrapper">
+		<?php do_action( 'layout-wrapper-hook' ); ?>
 		<div class="layout-contents">
+			<?php do_action( 'layout-content-hook' ); ?>
 			<main>
