@@ -428,51 +428,83 @@ a {
 /**
  * Section Header Navigation
  */
-.layout-header-nav .menu {
-	box-sizing: border-box;
-	display: table;
-	font-size: .9em;
-	margin: 0 0 5px 0;
+.header-nav-button {
+	border-bottom: solid 1px #ddd;
+	border-top: solid 1px #ddd;
+	display: block;
+	font-size: 1em;
 	padding: 5px 0;
-	table-layout: fixed;
 	text-align: center;
-	width: 100%;
 }
 
-.layout-header-nav .menu > li {
-	display: table-cell;
-	position: relative;
+.header-nav-button::before {
+	content: "\f333";
+	display: inline-block;
+	font: 1.5em 'dashicons';
+	margin: -.2em 2px 0 0;
 	vertical-align: middle;
 }
 
-.layout-header-nav .menu > li:first-child > a {
-	border-left: solid 1px #ddd;
+.layout-header-nav {
+	display: none;
+}
+
+.layout-header-nav .menu {
+	box-sizing: border-box;
+	font-size: .9em;
+	margin: 0 0 5px 0;
+	padding: 5px 0;
+	width: 100%;
 }
 
 .layout-header-nav .menu > li > a {
-	border-bottom: solid 3px #fff;
-	border-right: solid 1px #ddd;
+	border-bottom: solid 1px #ddd;
 	display: block;
-	padding: 0;
+	padding: 5px;
 	text-decoration: none;
 }
 
-.layout-header-nav .menu > li > a:hover {
-	border-bottom-color: #393939;
-	transition: all .15s ease-in-out;
+.layout-header-nav .menu > li .sub-menu {
+	display: none;
 }
 
-.layout-header-nav .menu > li > .sub-menu {
-	background: #fff;
-	box-shadow: 0 1px 2px rgba(0,0,0,.1);
-	box-sizing: border-box;
-	display: none;
-	list-style: none;
-	margin: 0;
-	padding: 5px;
-	position: absolute;
-	text-align: left;
-	width: 100%;
+@media screen and ( min-width: 768px ) {
+	.header-nav-button {
+		display: none;
+	}
+
+	.layout-header-nav {
+		display: block;
+	}
+
+	.layout-header-nav .menu {
+		display: table;
+		table-layout: fixed;
+		text-align: center;
+	}
+
+	.layout-header-nav .menu > li {
+		display: table-cell;
+	}
+
+	.layout-header-nav .menu > li {
+		vertical-align: middle;
+	}
+
+	.layout-header-nav .menu > li:first-child > a {
+		border-left: solid 1px #ddd;
+	}
+
+	.layout-header-nav .menu > li > a {
+		border-bottom: solid 3px #fff;
+		border-right: solid 1px #ddd;
+		padding: 0;
+	}
+
+	.layout-header-nav .menu > li > a:hover {
+		border-bottom-color: #393939;
+		transition: all .15s ease-in-out;
+	}
 }
 
 /**
