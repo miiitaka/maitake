@@ -131,6 +131,8 @@ button,
 input,
 select,
 textarea {
+	border: solid 1px #ddd;
+	box-sizing: border-box;
 	max-width: 100%;
 }
 
