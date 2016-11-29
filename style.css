@@ -435,8 +435,8 @@ a {
 	border-top: solid 1px #ddd;
 	display: block;
 	font-size: 1em;
-	padding: 5px 0;
-	text-align: center;
+	padding: 7px 0 5px 10px;
+	text-align: left;
 }
 
 .header-nav-button::before {
