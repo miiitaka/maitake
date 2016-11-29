@@ -308,7 +308,15 @@ a {
 .layout-header-global {
 	margin: 0 auto;
 	max-width: 1080px;
-	padding: 0 10px;
+	padding: 0 10px 10px 10px;
+}
+
+.layout-header-global::after {
+	clear: both;
+	content: ".";
+	display: block;
+	height: 0;
+	visibility: hidden;
 }
 
 .layout-header-logo {
@@ -324,6 +332,14 @@ a {
 }
 
 .layout-header-description {
+	background: #393939;
+	margin: 0 0 5px 0;
+	padding: 3px 0;
+}
+
+.layout-header-description p {
+	color: #fff;
+	font-size: .8em;
 	margin: 0 auto;
 	max-width: 1080px;
 	padding: 1px 10px;
