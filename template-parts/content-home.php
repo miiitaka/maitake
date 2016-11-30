@@ -22,7 +22,7 @@
 	</header>
 	<footer>
 		<p class="list-post-time">
-			<time><?php the_modified_time( get_option( 'date_format' ) ); ?></time>
+			<time><?php the_modified_time( get_option( 'date_format' ) . ' ' . get_option( 'time_format' ) ); ?></time>
 		</p>
 	</footer>
 	<div class="list-post-categories">
