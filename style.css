@@ -460,7 +460,7 @@ a {
 }
 
 .layout-header-nav .menu > li > a {
-	border-bottom: solid 1px #ddd;
+	border-bottom: dotted 1px #ddd;
 	display: block;
 	padding: 5px;
 	text-decoration: none;
