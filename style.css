@@ -292,6 +292,7 @@ body {
 	color: #393939;
 	font-size: 14px;
 	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+	font-feature-settings : "palt";
 }
 
 a {
