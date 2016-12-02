@@ -431,21 +431,27 @@ a {
 /**
  * Section Header Navigation
  */
-.header-nav-button {
+.header-nav-menu-button {
 	border-bottom: solid 1px #ddd;
 	border-top: solid 1px #ddd;
+	padding: 10px;
+}
+
+.header-nav-button {
 	display: block;
 	font-size: 1em;
-	padding: 7px 0 5px 10px;
+	padding: 0 0 0 1.5em;
+	position: relative;
 	text-align: left;
 }
 
 .header-nav-button::before {
 	content: "\f333";
 	display: inline-block;
-	font: 1.5em 'dashicons';
-	margin: -.2em 2px 0 0;
-	vertical-align: middle;
+	font: 1.2em 'dashicons';
+	margin: 0 0 0 -1.2em;
+	position: absolute;
+	top: 0;
 }
 
 .layout-header-nav {
@@ -613,27 +619,29 @@ a {
 
 .layout-container-list .list-post-time {
 	font-size: .9em;
-	margin: 0;
+	margin: 0 0 5px 0;
+	padding: 0 0 0 1.5em;
+	position: relative;
 }
 
 .layout-container-list .list-post-time time::before {
 	content: "\f321";
-	display: inline-block;
 	font: 1.2em 'dashicons';
-	margin: -.2em 2px 0 0;
-	vertical-align: middle;
+	margin: 0 0 0 -1.2em;
+	position: absolute;
 }
 
 .layout-container-list .list-post-categories {
 	font-size: .9em;
+	padding: 0 0 0 1.5em;
+	position: relative;
 }
 
 .layout-container-list .list-post-categories::before {
 	content: "\f203";
-	display: inline-block;
 	font: 1.2em 'dashicons';
-	margin: -.2em 2px 0 0;
-	vertical-align: middle;
+	margin: 0 0 0 -1.2em;
+	position: absolute;
 }
 
 /**
@@ -663,16 +671,16 @@ a {
 .widget-title {
 	border-bottom: 1px solid #393939;
 	font-size: 1.2em;
-	padding: 5px 0;
 	margin: 0 0 10px 0;
+	padding: 5px 0 5px 1.5em;
+	position: relative;
 }
 
 .widget-title::before {
 	content: "\f480";
-	display: inline-block;
 	font: 1.2em 'dashicons';
-	margin: -.2em 5px 0 0;
-	vertical-align: middle;
+	margin: 0 0 0 -1.2em;
+	position: absolute;
 }
 
 /* Archive Widget */
@@ -751,15 +759,17 @@ a {
 
 .widget_recent_entries .post-date {
 	display: block;
+	line-height: 1.2;
 	margin: 3px 0;
+	padding: 0 0 0 1.5em;
+	position: relative;
 }
 
 .widget_recent_entries .post-date::before {
 	content: "\f469";
-	display: inline-block;
 	font: 1.2em 'dashicons';
-	margin: -.2em 2px 0 0;
-	vertical-align: middle;
+	margin: 0 0 0 -1.2em;
+	position: absolute;
 }
 
 /* Meta Widget */
@@ -783,21 +793,26 @@ a {
 
 .widget_rss .rss-date {
 	display: block;
-	padding: 3px 0;
+	line-height: 1.2;
+	margin: 3px 0;
+	padding: 0 0 0 1.5em;
+	position: relative;
 }
 
 .widget_rss cite {
 	display: block;
 	font-style: normal;
-	padding: 3px 0;
+	line-height: 1.2;
+	margin: 3px 0 5px 0;
+	padding: 0 0 0 1.5em;
+	position: relative;
 }
 
 .widget_rss .rss-date::before,
 .widget_rss cite::before {
-	display: inline-block;
 	font: 1.2em 'dashicons';
-	margin: -.2em 2px 0 0;
-	vertical-align: middle;
+	margin: 0 0 0 -1.2em;
+	position: absolute;
 }
 
 .widget_rss .rss-date::before {
@@ -894,15 +909,17 @@ a {
 .post-header .post-time {
 	font-size: .9em;
 	margin: 0 10px 0 0;
+	padding: 0 0 0 1.5em;
+	position: relative;
 }
 
 .post-header .post-tags::before,
 .post-header .post-modified-time::before,
 .post-header .post-time::before {
-	display: inline-block;
 	font: 1.2em 'dashicons';
-	margin: -.2em 2px 0 0;
-	vertical-align: middle;
+	margin: 0 0 0 -1.2em;
+	position: absolute;
+	top: 0;
 }
 
 .post-header .post-tags::before {
@@ -1228,15 +1245,16 @@ a {
 	border-bottom: solid 1px #ccc;
 	font-size: 1em;
 	margin: 0;
-	padding: 0 0 5px 0;
+	padding: 0 0 5px 1.5em;
+	position: relative;
 }
 
 .comment-respond .comment-respond-title::before {
 	content: "\f119";
-	display: inline-block;
 	font: 1.2em 'dashicons';
-	margin: -.2em 2px 0 0;
-	vertical-align: middle;
+	margin: 0 0 0 -1.2em;
+	position: absolute;
+	top: 0;
 }
 
 .comment-respond .comment-notes {
@@ -1251,13 +1269,15 @@ a {
 	display: block;
 	font-size: .9em;
 	margin: 0 0 3px 0;
+	padding: 0 0 0 1.5em;
+	position: relative;
 }
 
 .comment-respond label::before {
-	display: inline-block;
 	font: 1.2em 'dashicons';
-	margin: -.2em 2px 0 0;
-	vertical-align: middle;
+	margin: 0 0 0 -1.2em;
+	position: absolute;
+	top: 0;
 }
 
 .comment-respond .comment-form-comment label::before {
@@ -1315,15 +1335,16 @@ a {
 .comment-list-wrapper .comment-feedback {
 	font-size: 1em;
 	margin: 0 0 10px 0;
-	padding: 0;
+	padding: 0 0 0 1.5em;
+	position: relative;
 }
 
 .comment-list-wrapper .comment-feedback::before {
 	content: "\f473";
-	display: inline-block;
 	font: 1.2em 'dashicons';
-	margin: -.2em 2px 0 0;
-	vertical-align: middle;
+	margin: 0 0 0 -1.2em;
+	position: absolute;
+	top: 0;
 }
 
 .comment-list-wrapper .comment-list,
@@ -1377,14 +1398,15 @@ a {
 
 .comment-list-wrapper .comment-reply-link {
 	font-size: .9em;
+	padding: 0 0 0 1.5em;
+	position: relative;
 }
 
 .comment-list-wrapper .comment-reply-link::before {
 	content: "\f242";
-	display: inline-block;
 	font: 1.2em 'dashicons';
-	margin: -.2em 2px 0 0;
-	vertical-align: middle;
+	margin: 0 0 0 -1.2em;
+	position: absolute;
 }
 
 /**
@@ -1477,6 +1499,8 @@ a {
  */
 .search-result .search-result-title {
 	font-size: 1.2em;
+	padding: 0 0 0 1.5em;
+	position: relative;
 }
 
 .search-result article {
@@ -1491,10 +1515,9 @@ a {
 
 .search-result .search-result-title::before {
 	content: "\f179";
-	display: inline-block;
 	font: 1.2em 'dashicons';
-	margin: -.2em 2px 0 0;
-	vertical-align: middle;
+	margin: 0 0 0 -1.2em;
+	position: absolute;
 }
 
 .search-result .search-result-post-title {
@@ -1512,16 +1535,17 @@ a {
 .archive-wrapper .archive-title {
 	font-size: 1.2em;
 	margin: 10px 0;
+	padding: 0 0 0 1.5em;
+	position: relative;
 }
 
 .archive-wrapper .author-title::before,
 .archive-wrapper .category-title::before,
 .archive-wrapper .date-title::before,
 .archive-wrapper .tag-title::before {
-	display: inline-block;
 	font: 1.2em 'dashicons';
-	margin: -.2em 5px 0 0;
-	vertical-align: middle;
+	margin: 0 0 0 -1.2em;
+	position: absolute;
 }
 
 .archive-wrapper .author-title::before {

@@ -66,7 +66,9 @@
 
 
 		<?php if ( has_nav_menu( 'primary' ) ) : ?>
-			<span class="header-nav-button" id="header-nav-switch">Menu</span>
+			<nav id="header-nav-switch" class="header-nav-menu-button">
+				<span class="header-nav-button">Menu</span>
+			</nav>
 			<nav class="layout-header-nav">
 				<?php
 				wp_nav_menu( array(
