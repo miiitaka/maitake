@@ -478,7 +478,7 @@ a {
 }
 
 @media screen and ( min-width: 768px ) {
-	.header-nav-button {
+	.header-nav-menu-button {
 		display: none;
 	}
 
@@ -953,14 +953,16 @@ a {
 
 .post-footer .post-edit-link {
 	font-size: 1em;
+	margin: 0 10px 0 0;
+	padding: 0 0 0 1.5em;
+	position: relative;
 }
 
 .post-footer .post-edit-link::before {
 	content: "\f109";
-	display: inline-block;
 	font: 1.2em 'dashicons';
-	margin: -.2em 2px 0 0;
-	vertical-align: middle;
+	margin: 0 0 0 -1.2em;
+	position: absolute;
 }
 
 /**
@@ -1003,14 +1005,16 @@ a {
 
 .page-footer .post-edit-link {
 	font-size: 1em;
+	margin: 0 10px 0 0;
+	padding: 0 0 0 1.5em;
+	position: relative;
 }
 
 .page-footer .post-edit-link::before {
 	content: "\f105";
-	display: inline-block;
 	font: 1.2em 'dashicons';
-	margin: -.2em 2px 0 0;
-	vertical-align: middle;
+	margin: 0 0 0 -1.2em;
+	position: absolute;
 }
 
 /**
