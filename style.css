@@ -299,6 +299,14 @@ a {
 	text-decoration: none;
 }
 
+a:hover {
+	text-decoration: underline;
+}
+
+pre {
+	overflow-y: auto;
+}
+
 /**
  * Section Layout
  */
