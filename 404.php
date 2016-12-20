@@ -15,7 +15,9 @@ get_header(); ?>
 
 	<div class="page-content">
 		<p>It looks like nothing was found at this location. Maybe try a search?</p>
-		<?php get_search_form(); ?>
+		<div class="page-404-search">
+			<?php get_search_form(); ?>
+		</div>
 	</div>
 </section>
 

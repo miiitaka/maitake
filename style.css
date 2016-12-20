@@ -1580,3 +1580,27 @@ pre {
 	font-size: .9em;
 	margin: 10px 0;
 }
+
+/**
+ * 404 parts
+ */
+.page-404-search input[type=search] {
+	padding: 10px;
+	width: 100%;
+}
+
+.page-404-search input[type=submit] {
+	background: #393939;
+	border: none;
+	box-sizing: border-box;
+	color: #fff;
+	cursor: pointer;
+	margin: 5px 0;
+	padding: 10px;
+	width: 100%;
+}
+
+.page-404-search input[type=submit]:hover {
+	background: #666;
+	transition: all .3s;
+}
