@@ -285,6 +285,23 @@ blockquote {
 }
 
 /**
+ * Custom header
+ */
+.custom-header-video {
+	padding-top: 56.25%;
+	position: relative;
+	width: 100%;
+}
+
+.custom-header-video iframe{
+	height:100%;
+	position:absolute;
+	right:0;
+	top:0;
+	width:100%;
+}
+
+/**
  * Default Elements
  */
 body {
@@ -344,7 +361,7 @@ pre {
 
 .layout-header-description {
 	background: #393939;
-	margin: 0 0 5px 0;
+	margin: 0;
 	padding: 3px 0;
 }
 
@@ -413,12 +430,10 @@ pre {
  */
 .layout-header-image {
 	margin: 0 auto;
-	max-width: 1080px;
-	padding: 0 10px;
 }
 
 .layout-header-image img {
-	max-width: 100%;
+	max-height: 100%;
 }
 
 .layout-header-title {
@@ -433,7 +448,8 @@ pre {
 }
 
 .layout-header-name {
-	padding: 15px 0 0 0;
+	display: block;
+	padding: 10px 0 0 0;
 }
 
 /**

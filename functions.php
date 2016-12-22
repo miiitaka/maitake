@@ -64,14 +64,15 @@ function maitake_setup() {
 	 */
 	$args = array(
 		'default-image'          => '',
-		'random-default'         => false,
+		'random-default'         => true,
 		'width'                  => 0,
 		'height'                 => 0,
-		'flex-height'            => false,
-		'flex-width'             => false,
+		'flex-height'            => true,
+		'flex-width'             => true,
 		'default-text-color'     => '',
 		'header-text'            => true,
 		'uploads'                => true,
+		'video'                  => true,
 		'wp-head-callback'       => '__return_false',
 		'admin-head-callback'    => '__return_false',
 		'admin-preview-callback' => '__return_false',
@@ -213,3 +214,40 @@ function theme_remove_hentry( $classes ) {
 	return $classes;
 }
 add_filter( 'post_class','theme_remove_hentry' );
+
+/**
+ * Header Image Tag
+ *
+ * @since  1.0.0
+ * @return string $html
+ */
+function maitake_header_image_tag( $html, $header, $attr ) {
+	if ( isset( $attr['sizes'] ) ) {
+		$html = str_replace( $attr['sizes'], '100vw', $html );
+	}
+	if ( isset( $attr['width'] ) ) {
+		$html = str_replace( $attr['width'], '100%', $html );
+	}
+	if ( isset( $attr['height'] ) ) {
+		$html = str_replace( $attr['height'], '100%', $html );
+	}
+	return $html;
+}
+add_filter( 'get_header_image_tag', 'maitake_header_image_tag', 10, 3 );
+
+/**
+ * Header Video Setting
+ *
+ * @since  1.0.0
+ * @return array $settings
+ */
+function maitake_header_video_settings( $settings ) {
+	if ( isset( $settings['width'] ) ) {
+		$settings['width'] = '100%';
+	}
+	if ( isset( $settings['height'] ) ) {
+		$settings['height'] = '';
+	}
+	return $settings;
+}
+add_filter( 'header_video_settings', 'maitake_header_video_settings' );

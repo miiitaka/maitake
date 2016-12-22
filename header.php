@@ -26,7 +26,15 @@
 		?>
 
 		<?php
-			if ( get_header_image() ) {
+			if ( function_exists( 'the_custom_header_markup' ) ) {
+				if ( is_header_video_active() && has_header_video() ) {
+					echo '<section class="layout-header-image custom-header-video">';
+				} else {
+					echo '<section class="layout-header-image">';
+				}
+				the_custom_header_markup();
+				echo '</section>';
+			}  elseif ( get_header_image() ) {
 				$format  = '<section class="layout-header-image">';
 				$format .= '<a href="' . esc_url( home_url( '/' ) ) . '">';
 				$format .= '<img src="' . get_header_image() . '" alt="' . esc_attr( get_bloginfo( 'name' ) ) . '">';
