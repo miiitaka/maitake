@@ -298,11 +298,11 @@ dd {
 }
 
 .custom-header-video iframe{
-	height:100%;
-	position:absolute;
-	right:0;
-	top:0;
-	width:100%;
+	height: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 100%;
 }
 
 /**
@@ -479,7 +479,7 @@ pre {
 	font: 1.2em 'dashicons';
 	margin: 0 0 0 -1.2em;
 	position: absolute;
-	top: 0;
+	top: .1em;
 }
 
 .layout-header-nav {
@@ -657,6 +657,7 @@ pre {
 	font: 1.2em 'dashicons';
 	margin: 0 0 0 -1.2em;
 	position: absolute;
+	top: .1em;
 }
 
 .layout-container-list .list-post-categories {
@@ -670,6 +671,7 @@ pre {
 	font: 1.2em 'dashicons';
 	margin: 0 0 0 -1.2em;
 	position: absolute;
+	top: .1em;
 }
 
 /**
@@ -798,6 +800,7 @@ pre {
 	font: 1.2em 'dashicons';
 	margin: 0 0 0 -1.2em;
 	position: absolute;
+	top: .1em;
 }
 
 /* Meta Widget */
@@ -841,6 +844,7 @@ pre {
 	font: 1.2em 'dashicons';
 	margin: 0 0 0 -1.2em;
 	position: absolute;
+	top: .1em;
 }
 
 .widget_rss .rss-date::before {
@@ -947,7 +951,7 @@ pre {
 	font: 1.2em 'dashicons';
 	margin: 0 0 0 -1.2em;
 	position: absolute;
-	top: 0;
+	top: .1em;
 }
 
 .post-header .post-tags::before {
@@ -992,6 +996,7 @@ pre {
 	font: 1.2em 'dashicons';
 	margin: 0 0 0 -1.2em;
 	position: absolute;
+	top: .1em;
 }
 
 /**
@@ -1045,6 +1050,7 @@ pre {
 	font: 1.2em 'dashicons';
 	margin: 0 0 0 -1.2em;
 	position: absolute;
+	top: .1em;
 }
 
 /**
@@ -1289,7 +1295,7 @@ pre {
 	font: 1.2em 'dashicons';
 	margin: 0 0 0 -1.2em;
 	position: absolute;
-	top: 0;
+	top: .1em;
 }
 
 .comment-respond .comment-notes {
@@ -1312,7 +1318,7 @@ pre {
 	font: 1.2em 'dashicons';
 	margin: 0 0 0 -1.2em;
 	position: absolute;
-	top: 0;
+	top: .1em;
 }
 
 .comment-respond .comment-form-comment label::before {
@@ -1379,7 +1385,7 @@ pre {
 	font: 1.2em 'dashicons';
 	margin: 0 0 0 -1.2em;
 	position: absolute;
-	top: 0;
+	top: .1em;
 }
 
 .comment-list-wrapper .comment-list,
@@ -1442,6 +1448,7 @@ pre {
 	font: 1.2em 'dashicons';
 	margin: 0 0 0 -1.2em;
 	position: absolute;
+	top: .1em;
 }
 
 /**
@@ -1553,6 +1560,7 @@ pre {
 	font: 1.2em 'dashicons';
 	margin: 0 0 0 -1.2em;
 	position: absolute;
+	top: .1em;
 }
 
 .search-result .search-result-post-title {
@@ -1581,6 +1589,7 @@ pre {
 	font: 1.2em 'dashicons';
 	margin: 0 0 0 -1.2em;
 	position: absolute;
+	top: .1em;
 }
 
 .archive-wrapper .author-title::before {
