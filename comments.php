@@ -23,8 +23,8 @@ if ( post_password_required() ) {
 	?>
 </section>
 
-<section class="comment-list-wrapper">
-	<?php if ( have_comments() ) : ?>
+<?php if ( have_comments() ) : ?>
+	<section class="comment-list-wrapper">
 		<header>
 			<h2 class="comment-feedback">
 				<?php
@@ -61,5 +61,5 @@ if ( post_password_required() ) {
 		</ol>
 
 		<?php the_comments_navigation(); ?>
-	<?php endif; ?>
-</section>
+	</section>
+<?php endif; ?>
