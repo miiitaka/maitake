@@ -29,6 +29,8 @@
 		</ul>
 	</header>
 
+	<?php do_action( 'layout-post-hook' ); ?>
+
 	<div class="post-content">
 		<?php
 			the_content();
