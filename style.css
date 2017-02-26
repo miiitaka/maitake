@@ -867,20 +867,27 @@ pre {
 	content: "\f179";
 }
 
+.widget_search form {
+	position: relative;
+}
+
 .widget_search input[type=search] {
 	padding: 10px;
 	width: 100%;
 }
 
-.widget_search input[type=submit] {
+.widget_search button[type=submit] {
 	background: #393939;
 	border: none;
+	border-radius: 3px;
 	box-sizing: border-box;
 	color: #fff;
 	cursor: pointer;
-	margin: 5px 0;
-	padding: 10px;
-	width: 100%;
+	padding: 5px;
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	width: 3em;
 }
 
 .widget_search input[type=submit]:hover {
@@ -1572,8 +1579,10 @@ pre {
 }
 
 .search-result .search-result-post-title {
+	border-bottom: solid 1px #393939;
 	font-size: 1.2em;
-	margin: 0 0 5px 0;
+	margin: 0 0 10px 0;
+	padding: 0 0 5px 0;
 }
 
 .search-result .search-result-post-excerpt {
