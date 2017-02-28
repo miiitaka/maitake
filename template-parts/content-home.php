@@ -12,7 +12,7 @@
 		if ( ( function_exists( 'has_post_thumbnail' ) ) && ( has_post_thumbnail() ) ) {
 			echo sprintf( '<figure><a href="%s">', esc_url ( get_permalink () ) );
 			the_post_thumbnail ( 'full', array( 'alt' => the_title_attribute ( 'echo=0' ) ) );
-			echo '</figure>';
+			echo '</a></figure>';
 		}
 	?>
 	<header>

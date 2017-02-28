@@ -20,8 +20,8 @@
 		<?php the_title( '<h1 class="post-title">', '</h1>' ); ?>
 		<ul class="post-meta">
 			<li>
-				<time class="post-time">Release date&nbsp;:&nbsp;<?php the_time( get_option( 'date_format' ) . ' ' . get_option( 'time_format' ) ); ?></time>
 				<time class="post-modified-time">Update date&nbsp;:&nbsp;<?php the_modified_time( get_option( 'date_format' ) . ' ' . get_option( 'time_format' ) ); ?></time>
+				<time class="post-time">Release date&nbsp;:&nbsp;<?php the_time( get_option( 'date_format' ) . ' ' . get_option( 'time_format' ) ); ?></time>
 			</li>
 			<?php if ( has_tag() ) : ?>
 				<li class="post-tags"><?php the_tags( "" ); ?></li>
