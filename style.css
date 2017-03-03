@@ -1088,6 +1088,7 @@ pre {
 
 .post-content p {
 	margin: 0 0 10px 0;
+	padding: 0 15px;
 }
 
 .post-content blockquote {
@@ -1135,6 +1136,11 @@ pre {
 	padding: 0 .5em;
 }
 
+.post-content figcaption {
+	border-bottom: solid 1px #ebebeb;
+	margin: 0 10px 0 10px;
+}
+
 /**
  * Page base tags style
  */
@@ -1151,6 +1157,7 @@ pre {
 
 .page-content p {
 	margin: 0 0 10px 0;
+	padding: 0 15px;
 }
 
 .page-content blockquote {
@@ -1571,7 +1578,7 @@ pre {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	margin: 0 0 10px 0;
-	padding: 10px;
+	padding: 15px;
 }
 
 .search-result .search-result-title::before {
