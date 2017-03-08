@@ -1081,9 +1081,23 @@ pre {
 .post-content h4,
 .post-content h5,
 .post-content h6 {
-	border-left: solid 5px #393939;
-	margin: 20px 0;
-	padding: 0 0 0 10px;
+	border-bottom: solid 3px #cccccc;
+	padding: 0 0 5px 0;
+	position: relative;
+}
+
+.post-content h1:after,
+.post-content h2:after,
+.post-content h3:after,
+.post-content h4:after,
+.post-content h5:after,
+.post-content h6:after {
+	border-bottom: solid 3px #393939;
+	bottom: -3px;
+	content: " ";
+	display: block;
+	position: absolute;
+	width: 20%;
 }
 
 .post-content p {
@@ -1138,7 +1152,7 @@ pre {
 
 .post-content figcaption {
 	border-bottom: solid 1px #ebebeb;
-	margin: 0 10px 0 10px;
+	margin: 0 10px 10px 10px;
 }
 
 /**
@@ -1150,9 +1164,23 @@ pre {
 .page-content h4,
 .page-content h5,
 .page-content h6 {
-	border-left: solid 5px #393939;
-	margin: 0 0 15px 0;
-	padding: 0 0 0 10px;
+	border-bottom: solid 3px #cccccc;
+	padding: 0 0 5px 0;
+	position: relative;
+}
+
+.page-content h1:after,
+.page-content h2:after,
+.page-content h3:after,
+.page-content h4:after,
+.page-content h5:after,
+.page-content h6:after {
+	border-bottom: solid 3px #393939;
+	bottom: -3px;
+	content: " ";
+	display: block;
+	position: absolute;
+	width: 20%;
 }
 
 .page-content p {
