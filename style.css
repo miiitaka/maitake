@@ -542,7 +542,7 @@ pre {
 	.layout-header-nav .menu > li > a {
 		border-bottom: solid 3px #fff;
 		border-right: solid 1px #ddd;
-		padding: 0;
+		padding: 2px 0;
 	}
 
 	.layout-header-nav .menu > li > a:hover {
