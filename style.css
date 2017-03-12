@@ -995,14 +995,6 @@ pre {
 	padding: 10px 15px;
 }
 
-.post-content img {
-	height: auto;
-	margin: 20px auto;
-	max-width: 100%;
-	max-height: 100%;
-	width: auto;
-}
-
 .post-footer .post-edit-link {
 	font-size: 1em;
 	margin: 0 10px 0 0;
@@ -1048,13 +1040,6 @@ pre {
 	line-height: 1.7;
 	margin: 0 0 15px 0;
 	padding: 15px;
-}
-
-.page-content img {
-	height: auto;
-	width: auto;
-	max-width: 100%;
-	max-height: 100%;
 }
 
 .page-footer .post-edit-link {
@@ -1122,6 +1107,18 @@ pre {
 	line-height: 1em;
 	position: absolute;
 	top: 0;
+}
+
+.post-content img {
+	height: auto;
+	margin: 20px auto;
+	max-width: 100%;
+	max-height: 100%;
+	width: auto;
+}
+
+.post-content a {
+	text-decoration: underline;
 }
 
 .post-content table {
@@ -1204,6 +1201,17 @@ pre {
 	line-height: 1em;
 	position: absolute;
 	top: 0;
+}
+
+.page-content img {
+	height: auto;
+	width: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.page-content a {
+	text-decoration: underline;
 }
 
 .page-content table {
