@@ -24,7 +24,7 @@
 				<time class="post-time">Release date&nbsp;:&nbsp;<?php the_time( get_option( 'date_format' ) . ' ' . get_option( 'time_format' ) ); ?></time>
 			</li>
 			<?php if ( has_tag() ) : ?>
-				<li class="post-tags"><?php the_tags( "" ); ?></li>
+				<li class="post-tags"><?php the_tags( '<ul><li>', '</li><li>', '</li></ul>' ); ?></li>
 			<?php endif; ?>
 		</ul>
 	</header>

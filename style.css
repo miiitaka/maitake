@@ -683,6 +683,17 @@ pre {
 	top: .1em;
 }
 
+.layout-container-list .list-post-categories a {
+	background: #ddd;
+	border: solid 1px #ddd;
+	border-radius: 3px;
+	color: #393939;
+	display: inline-block;
+	font-size: .95em;
+	margin: 0 0 2px 0;
+	padding: 0 .3em .1em .3em;
+}
+
 /**
  * Widget common parts
  */
@@ -752,6 +763,10 @@ pre {
 
 .widget_calendar tbody td {
 	text-align: center;
+}
+
+.widget_calendar tbody td a {
+	text-decoration: underline;
 }
 
 .widget_calendar tfoot #prev {
@@ -909,6 +924,16 @@ pre {
 	width: 100%;
 }
 
+.widget_tag_cloud .tagcloud a {
+	background: #ddd;
+	border: solid 1px #ddd;
+	border-radius: 3px;
+	color: #393939;
+	display: inline-block;
+	margin: 0 0 2px 0;
+	padding: 0 .3em .1em .3em;
+}
+
 /* Text Widget */
 .widget_text .widget-title::before {
 	content: "\f464";
@@ -944,7 +969,7 @@ pre {
 .post-header .post-title {
 	border-bottom: solid 1px #ccc;
 	font-size: 1.5em;
-	margin: 0 0 10px 0;
+	margin: 0 0 5px 0;
 	padding: 0 0 10px 0;
 }
 
@@ -958,7 +983,7 @@ pre {
 .post-header .post-modified-time,
 .post-header .post-time {
 	font-size: .9em;
-	margin: 0 10px 0 0;
+	margin: 5px 10px 0 0;
 	padding: 0 0 0 1.5em;
 	position: relative;
 }
@@ -972,16 +997,53 @@ pre {
 	top: .1em;
 }
 
-.post-header .post-tags::before {
-	content: "\f323";
-}
-
 .post-header .post-modified-time::before {
 	content: "\f321";
 }
 
 .post-header .post-time::before {
 	content: "\f469";
+}
+
+.post-header .post-tags::before {
+	content: "\f323";
+}
+
+.post-header .post-tags ul {
+	display: inline-flex;
+	flex-wrap: wrap;
+	list-style: none;
+	margin: 0 0 0 5px;
+	padding: 0;
+}
+
+.post-header .post-tags li {
+	background-color: #ddd;
+	border-left-style: none;
+	cursor: pointer;
+	display: flex;
+	line-height: 1;
+	margin: 0 .5em .5em .5em;
+	padding: .2em .6em;
+}
+
+.post-header .post-tags li::before {
+	background-color: #ddd;
+	content: '';
+	height: 1em;
+	margin-left: -1.1em;
+	transform: rotate(45deg);
+	width: 1em;
+}
+
+.post-header .post-tags a {
+	align-items: center;
+	color: #393939;
+	display: flex;
+	font-size: .95em;
+	margin-left: -.3em;
+	white-space: nowrap;
+	z-index: 100;
 }
 
 .post-content {
