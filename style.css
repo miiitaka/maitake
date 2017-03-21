@@ -896,16 +896,15 @@ pre {
 .widget_search button[type=submit] {
 	background: #393939;
 	border: none;
-	border-radius: 3px;
 	box-sizing: border-box;
 	color: #fff;
 	cursor: pointer;
 	display: block;
-	height: 80%;
-	padding: 5px;
+	height: 100%;
+	padding: 0;
 	position: absolute;
-	right: 5px;
-	top: 10%;
+	right: 0;
+	top: 0;
 	width: 3em;
 }
 
@@ -1754,16 +1753,15 @@ pre {
 .page-404-search button[type=submit] {
 	background: #393939;
 	border: none;
-	border-radius: 3px;
 	box-sizing: border-box;
 	color: #fff;
 	cursor: pointer;
 	display: block;
-	height: 80%;
-	padding: 5px;
+	height: 100%;
+	padding: 0;
 	position: absolute;
-	right: 5px;
-	top: 10%;
+	right: 0;
+	top: 0;
 	width: 3em;
 }
 
