@@ -666,7 +666,7 @@ pre {
 	font: 1.2em 'dashicons';
 	margin: 0 0 0 -1.2em;
 	position: absolute;
-	top: .1em;
+	top: 0;
 }
 
 .layout-container-list .list-post-categories {
@@ -680,7 +680,7 @@ pre {
 	font: 1.2em 'dashicons';
 	margin: 0 0 0 -1.2em;
 	position: absolute;
-	top: .1em;
+	top: 0;
 }
 
 .layout-container-list .list-post-categories a {
@@ -731,6 +731,7 @@ pre {
 	font: 1.2em 'dashicons';
 	margin: 0 0 0 -1.2em;
 	position: absolute;
+	top: 7px;
 }
 
 /* Archive Widget */
@@ -993,7 +994,7 @@ pre {
 	font: 1.2em 'dashicons';
 	margin: 0 0 0 -1.2em;
 	position: absolute;
-	top: .1em;
+	top: 0;
 }
 
 .post-header .post-modified-time::before {
@@ -1418,7 +1419,7 @@ pre {
 	font: 1.2em 'dashicons';
 	margin: 0 0 0 -1.2em;
 	position: absolute;
-	top: .1em;
+	top: 0;
 }
 
 .comment-respond .comment-notes {
@@ -1441,7 +1442,7 @@ pre {
 	font: 1.2em 'dashicons';
 	margin: 0 0 0 -1.2em;
 	position: absolute;
-	top: .1em;
+	top: .2em;
 }
 
 .comment-respond .comment-form-comment label::before {
@@ -1508,7 +1509,7 @@ pre {
 	font: 1.2em 'dashicons';
 	margin: 0 0 0 -1.2em;
 	position: absolute;
-	top: .1em;
+	top: 0;
 }
 
 .comment-list-wrapper .comment-list,
@@ -1571,7 +1572,7 @@ pre {
 	font: 1.2em 'dashicons';
 	margin: 0 0 0 -1.2em;
 	position: absolute;
-	top: .1em;
+	top: 0;
 }
 
 /**
@@ -1683,7 +1684,7 @@ pre {
 	font: 1.2em 'dashicons';
 	margin: 0 0 0 -1.2em;
 	position: absolute;
-	top: .1em;
+	top: 0;
 }
 
 .search-result .search-result-post-title {
@@ -1714,7 +1715,7 @@ pre {
 	font: 1.2em 'dashicons';
 	margin: 0 0 0 -1.2em;
 	position: absolute;
-	top: .1em;
+	top: 0;
 }
 
 .archive-wrapper .author-title::before {
