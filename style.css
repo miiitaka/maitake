@@ -328,7 +328,7 @@ a[target="_blank"]::after {
 	content: "\f242";
 	display: inline-block;
 	font: 1em 'dashicons';
-	padding: 0px 3px 0 2px;
+	padding: 0 3px 0 2px;
 }
 
 pre {
