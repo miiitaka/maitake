@@ -566,6 +566,10 @@ pre {
 	padding: 5px 10px;
 }
 
+.pagination a {
+	background: #fff;
+}
+
 .pagination a:hover,
 .pagination span {
 	background: #393939;
