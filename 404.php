@@ -19,6 +19,12 @@ get_header(); ?>
 			<?php get_search_form(); ?>
 		</div>
 	</div>
+
+	<?php
+	if ( is_active_sidebar( '404-footer-1' )  ) {
+		dynamic_sidebar( '404-footer-1' );
+	}
+	?>
 </section>
 
 <?php get_footer();
