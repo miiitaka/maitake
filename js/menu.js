@@ -7,11 +7,7 @@
 			elmSwitch = $("#header-nav-switch");
 
 		elmSwitch.on(event, function() {
-			if (elmNav.css("display") === "block") {
-				elmNav.stop().slideUp();
-			} else {
-				elmNav.stop().slideDown();
-			}
+			elmNav.not(":animated").slideToggle();
 		});
 	});
 })(jQuery);
