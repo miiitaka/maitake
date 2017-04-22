@@ -281,8 +281,11 @@ add_filter( 'header_video_settings', 'maitake_header_video_settings' );
  */
 function maitaka_the_title( $title ) {
 	if ( is_search() ) {
-		$search_query = get_search_query();
-		$title        = str_replace( $search_query, '<mark>' . $search_query . '</mark>', $title );
+		$search_query = mb_convert_kana( get_search_query(), "as", "UTF-8" );
+		$search_query = trim( get_search_query() );
+		if ( !empty( $search_query ) ) {
+			$title = str_replace( $search_query, '<mark>' . $search_query . '</mark>', $title );
+		}
 	}
 	return $title;
 }
@@ -297,8 +300,11 @@ add_action( 'the_title', 'maitaka_the_title' );
  */
 function maitaka_the_excerpt( $excerpt ) {
 	if ( is_search() ) {
-		$search_query = get_search_query();
-		$excerpt      = str_replace( $search_query, '<mark>' . $search_query . '</mark>', $excerpt );
+		$search_query = mb_convert_kana( get_search_query(), "as", "UTF-8" );
+		$search_query = trim( get_search_query() );
+		if ( !empty( $search_query ) ) {
+			$excerpt = str_replace( $search_query, '<mark>' . $search_query . '</mark>', $excerpt );
+		}
 	}
 	return $excerpt;
 }
