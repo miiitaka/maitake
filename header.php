@@ -68,6 +68,9 @@
 					echo $format;
 				?>
 			</header>
+			<aside class="layout-header-search">
+				<?php get_search_form(); ?>
+			</aside>
 			<?php do_action( 'layout-header-hook' ); ?>
 		</section>
 

@@ -341,7 +341,7 @@ pre {
 .layout-header {
 	background: #fff;
 	box-shadow: 0 1px 2px rgba(0,0,0,.1);
-	width: 100%;
+	max-width: 100%;
 }
 
 .layout-header-global {
@@ -359,8 +359,56 @@ pre {
 }
 
 .layout-header-logo {
-	float: left;
-	max-width: 1080px;
+	float: none;
+	max-width: 100%;
+}
+
+.layout-header-search {
+	box-sizing: border-box;
+	float: none;
+	margin: 15px 0 0 0;
+	width: 100%;
+}
+
+.layout-header-search form {
+	position: relative;
+}
+
+.layout-header-search input[type=search] {
+	padding: 10px;
+	width: 100%;
+}
+
+.layout-header-search button[type=submit] {
+	background: #393939;
+	border: none;
+	box-sizing: border-box;
+	color: #fff;
+	cursor: pointer;
+	display: block;
+	height: 100%;
+	padding: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 3em;
+}
+
+.layout-header-search button[type=submit]:hover {
+	background: #666;
+	transition: all .3s;
+}
+
+@media screen and ( min-width: 1100px ) {
+	.layout-header-logo {
+		float: left;
+		max-width: 1080px;
+	}
+
+	.layout-header-search {
+		float: right;
+		width: 300px;
+	}
 }
 
 .layout-header-nav {
