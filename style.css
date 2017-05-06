@@ -314,6 +314,7 @@ body {
 	font-size: 14px;
 	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 	font-feature-settings : "palt";
+	word-break: break-word;
 }
 
 a {
@@ -897,6 +898,10 @@ pre {
 /* RSS Widget */
 .widget_rss .widget-title::before {
 	content: "\f303";
+}
+
+.widget_rss .rsswidget:first-child {
+	display: none;
 }
 
 .widget_rss .rss-date {
