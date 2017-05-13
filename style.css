@@ -1688,6 +1688,8 @@ pre {
 .post-navigation .nav-previous a,
 .post-navigation .nav-next a {
 	background: #393939;
+	box-sizing: border-box;
+	border: solid 1px #ccc;
 	color: #fff;
 	display: block;
 	padding: 10px 5px;
