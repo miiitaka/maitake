@@ -19,7 +19,10 @@
 
 	<div class="author-description">
 		<h2 class="author-title">
-			Author:&nbsp;<span id="author-name"><?php esc_html( the_author() ); ?></span>
+			Author:&nbsp;
+			<a class="author-link" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>">
+				<span id="author-name"><?php esc_html( the_author() ); ?></span>
+			</a>
 		</h2>
 		<p class="author-biography">
 			<?php esc_html( the_author_meta( 'description' ) ); ?>
