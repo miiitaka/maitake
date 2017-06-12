@@ -25,7 +25,9 @@
 			<time><?php the_time( get_option( 'date_format' ) . ' ' . get_option( 'time_format' ) ); ?></time>
 		</p>
 	</footer>
-	<div class="list-post-categories">
-		<?php the_category( ' ' ); ?>
-	</div>
+	<?php if ( get_the_category() ) : ?>
+		<div class="list-post-categories">
+			<?php the_category( ' ' ); ?>
+		</div>
+	<?php endif; ?>
 </article>
