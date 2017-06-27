@@ -22,7 +22,7 @@ get_header(); ?>
 				} elseif ( is_tag() ) {
 					the_archive_title( '<h1 class="archive-title tag-title">', '</h1>' );
 				} else {
-					the_archive_title( '<h1 class="archive-title">', '</h1>' );
+					the_archive_title( '<h1 class="archive-title category-title">', '</h1>' );
 				}
 				the_archive_description( '<div class="archive-description">', '</div>' );
 			?>
