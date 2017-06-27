@@ -314,7 +314,7 @@ body {
 	font-size: 14px;
 	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 	font-feature-settings : "palt";
-	word-break: break-word;
+	word-break: break-all;
 }
 
 a {
@@ -421,6 +421,7 @@ pre {
 .layout-header-description p {
 	color: #fff;
 	font-size: .8em;
+	letter-spacing: 1px;
 	margin: 0 auto;
 	max-width: 1080px;
 	padding: 1px 10px;
@@ -878,9 +879,10 @@ pre {
 .widget_recent_entries .post-date::before {
 	content: "\f469";
 	font: 1em 'dashicons';
+	line-height: 1.2;
 	margin: 0 0 0 -1.2em;
 	position: absolute;
-	top: 3px;
+	top: 0;
 }
 
 /* Meta Widget */
@@ -1800,6 +1802,10 @@ pre {
 .archive-wrapper .archive-description {
 	font-size: .9em;
 	margin: 10px 0;
+}
+
+.archive-wrapper .archive-description p {
+	margin: 0 0 0 .5%;
 }
 
 /**
