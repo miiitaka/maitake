@@ -626,8 +626,9 @@ pre {
 .pagination .prev::before {
 	content: "\f141";
 	display: inline-block;
+	line-height: 1.2;
 	font: 1.2em 'dashicons';
-	margin: -.2em 0 0 0;
+	margin: 0;
 	vertical-align: middle;
 }
 
@@ -635,7 +636,8 @@ pre {
 	content: "\f139";
 	display: inline-block;
 	font: 1.2em 'dashicons';
-	margin: -.2em 0 0 0;
+	line-height: 1.2;
+	margin: 0;
 	vertical-align: middle;
 }
 
@@ -707,13 +709,14 @@ pre {
 .layout-container-list .list-post-time {
 	font-size: .9em;
 	margin: 0 0 5px 0;
-	padding: 0 0 0 1.5em;
+	padding: 0 0 0 1.2em;
 	position: relative;
 }
 
 .layout-container-list .list-post-time time::before {
 	content: "\f321";
-	font: 1.2em 'dashicons';
+	font: 1em 'dashicons';
+	line-height: 1.2;
 	margin: 0 0 0 -1.2em;
 	position: absolute;
 	top: 0;
@@ -721,14 +724,15 @@ pre {
 
 .layout-container-list .list-post-categories {
 	font-size: .9em;
-	padding: 0 0 0 1.5em;
+	padding: 0 0 0 1.2em;
 	position: relative;
 }
 
 .layout-container-list .list-post-categories::before {
 	content: "\f203";
-	font: 1.2em 'dashicons';
-	margin: .1em 0 0 -1.2em;
+	font: 1em 'dashicons';
+	line-height: 1.2;
+	margin: 0 0 0 -1.2em;
 	position: absolute;
 	top: 0;
 }
@@ -778,9 +782,11 @@ pre {
 .widget-title::before {
 	content: "\f480";
 	font: 1.2em 'dashicons';
+	line-height: 1.2;
 	margin: 0 0 0 -1.2em;
+	padding: 5px 0 0 0;
 	position: absolute;
-	top: 7px;
+	top: 0;
 }
 
 /* Archive Widget */
@@ -865,16 +871,16 @@ pre {
 	display: block;
 	line-height: 1.2;
 	margin: 3px 0;
-	padding: 0 0 0 1.5em;
+	padding: 0 0 0 1.2em;
 	position: relative;
 }
 
 .widget_recent_entries .post-date::before {
 	content: "\f469";
-	font: 1.2em 'dashicons';
+	font: 1em 'dashicons';
 	margin: 0 0 0 -1.2em;
 	position: absolute;
-	top: .1em;
+	top: 3px;
 }
 
 /* Meta Widget */
@@ -904,7 +910,7 @@ pre {
 	display: block;
 	line-height: 1.2;
 	margin: 3px 0;
-	padding: 0 0 0 1.5em;
+	padding: 0 0 0 1.2em;
 	position: relative;
 }
 
@@ -919,10 +925,10 @@ pre {
 
 .widget_rss .rss-date::before,
 .widget_rss cite::before {
-	font: 1.2em 'dashicons';
+	font: 1em 'dashicons';
 	margin: 0 0 0 -1.2em;
 	position: absolute;
-	top: .1em;
+	top: 3px;
 }
 
 .widget_rss .rss-date::before {
@@ -1044,7 +1050,8 @@ pre {
 .post-header .post-tags::before,
 .post-header .post-modified-time::before,
 .post-header .post-time::before {
-	font: 1.2em 'dashicons';
+	font: 1em 'dashicons';
+	line-height: 1.2;
 	margin: 0 0 0 -1.2em;
 	position: absolute;
 	top: 0;
@@ -1470,6 +1477,7 @@ pre {
 .comment-respond .comment-respond-title::before {
 	content: "\f119";
 	font: 1.2em 'dashicons';
+	line-height: 1.2;
 	margin: 0 0 0 -1.2em;
 	position: absolute;
 	top: 0;
@@ -1485,7 +1493,6 @@ pre {
 
 .comment-respond label {
 	display: block;
-	font-size: .9em;
 	margin: 0 0 3px 0;
 	padding: 0 0 0 1.5em;
 	position: relative;
@@ -1493,9 +1500,10 @@ pre {
 
 .comment-respond label::before {
 	font: 1.2em 'dashicons';
+	line-height: 1.2;
 	margin: 0 0 0 -1.2em;
 	position: absolute;
-	top: .2em;
+	top: 0;
 }
 
 .comment-respond .comment-form-comment label::before {
@@ -1614,7 +1622,7 @@ pre {
 }
 
 .comment-list-wrapper .comment-reply-link {
-	font-size: .9em;
+	font-size: 1em;
 	padding: 0 0 0 1.5em;
 	position: relative;
 }
@@ -1767,6 +1775,7 @@ pre {
 .archive-wrapper .date-title::before,
 .archive-wrapper .tag-title::before {
 	font: 1.2em 'dashicons';
+	line-height: 1.2;
 	margin: 0 0 0 -1.2em;
 	position: absolute;
 	top: 0;
