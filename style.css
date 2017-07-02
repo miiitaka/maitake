@@ -1593,14 +1593,6 @@ pre {
 	padding: 10px;
 }
 
-.comment-list-wrapper .children .comment::before {
-	content: "\f473";
-	display: inline-block;
-	font: 1.2em 'dashicons';
-	margin: -.2em 2px 0 0;
-	vertical-align: middle;
-}
-
 .comment-list-wrapper .children .comment {
 	border: none;
 	margin: 0;
