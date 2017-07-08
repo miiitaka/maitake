@@ -710,30 +710,30 @@ pre {
 .layout-container-list .list-post-time {
 	font-size: .9em;
 	margin: 0 0 5px 0;
-	padding: 0 0 0 1.2em;
+	padding: 0 0 0 1.5em;
 	position: relative;
 }
 
 .layout-container-list .list-post-time time::before {
 	content: "\f321";
-	font: 1em 'dashicons';
+	font: 1.2em 'dashicons';
 	line-height: 1.2;
-	margin: 0 0 0 -1.2em;
+	margin: 0 0 0 -1.3em;
 	position: absolute;
 	top: 0;
 }
 
 .layout-container-list .list-post-categories {
 	font-size: .9em;
-	padding: 0 0 0 1.2em;
+	padding: 0 0 0 1em;
 	position: relative;
 }
 
 .layout-container-list .list-post-categories::before {
 	content: "\f203";
-	font: 1em 'dashicons';
+	font: 1.2em 'dashicons';
 	line-height: 1.2;
-	margin: 0 0 0 -1.2em;
+	margin: 0 0 0 -1em;
 	position: absolute;
 	top: 0;
 }
@@ -878,7 +878,7 @@ pre {
 
 .widget_recent_entries .post-date::before {
 	content: "\f469";
-	font: 1em 'dashicons';
+	font: 1.2em 'dashicons';
 	line-height: 1.2;
 	margin: 0 0 0 -1.2em;
 	position: absolute;
@@ -927,7 +927,7 @@ pre {
 
 .widget_rss .rss-date::before,
 .widget_rss cite::before {
-	font: 1em 'dashicons';
+	font: 1.2em 'dashicons';
 	margin: 0 0 0 -1.2em;
 	position: absolute;
 	top: 3px;
@@ -1052,7 +1052,7 @@ pre {
 .post-header .post-tags::before,
 .post-header .post-modified-time::before,
 .post-header .post-time::before {
-	font: 1em 'dashicons';
+	font: 1.2em 'dashicons';
 	line-height: 1.2;
 	margin: 0 0 0 -1.2em;
 	position: absolute;
