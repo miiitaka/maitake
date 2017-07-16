@@ -221,6 +221,9 @@ function maitake_scripts() {
 
 	// Menu Script
 	wp_enqueue_script( 'maitake-menu-script', get_template_directory_uri() . '/js/menu.js', array( 'jquery' ), '1.0.0', true );
+
+	// Move Script
+	wp_enqueue_script( 'maitake-move-script', get_template_directory_uri() . '/js/move.js', array( 'jquery' ), '1.0.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'maitake_scripts' );
 
