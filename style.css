@@ -1225,7 +1225,7 @@ pre {
 
 .post-content blockquote:before {
 	color: #999;
-	content: "“";
+	content: "\201C";
 	font-size: 500%;
 	left: 5px;
 	line-height: 1em;
@@ -1319,7 +1319,7 @@ pre {
 
 .page-content blockquote:before {
 	color: #999;
-	content: "“";
+	content: "\201C";
 	font-size: 500%;
 	left: 5px;
 	line-height: 1em;
@@ -1759,7 +1759,7 @@ pre {
  */
 .archive-wrapper .archive-title {
 	font-size: 1.2em;
-	margin: 10px 0;
+	margin: 0 0 10px 0;
 	padding: 0 0 0 1.5em;
 	position: relative;
 }
