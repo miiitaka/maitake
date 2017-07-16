@@ -22,6 +22,10 @@
 			</span>
 		</footer>
 	</div>
+
+	<div id="move-to-the-top" class="move-to-the-top">
+		<span class="dashicons dashicons-arrow-up-alt2"></span>
+	</div>
 	<?php wp_footer(); ?>
 </body>
 </html>

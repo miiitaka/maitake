@@ -1831,3 +1831,22 @@ pre {
 	background: #666;
 	transition: all .3s;
 }
+
+/**
+ * Move to the top page
+ */
+.move-to-the-top {
+	background: #444444;
+	border-radius: 25px;
+	bottom: 20px;
+	color: #ffffff;
+	cursor: pointer;
+	height: 50px;
+	position: fixed;
+	right: 20px;
+	width: 50px;
+}
+
+.move-to-the-top span {
+	width: 50px;
+}
