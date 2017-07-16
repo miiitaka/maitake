@@ -1845,6 +1845,7 @@ pre {
 	position: fixed;
 	right: 20px;
 	width: 50px;
+	z-index: 9999;
 }
 
 .move-to-the-top span {
