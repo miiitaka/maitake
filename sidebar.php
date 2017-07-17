@@ -10,6 +10,8 @@
 
 <?php if ( is_active_sidebar( 'sidebar-1' )  ) : ?>
 	<aside class="layout-sidebar">
+		<?php do_action( 'layout-sidebar-top-hook' ); ?>
 		<?php dynamic_sidebar( 'sidebar-1' ); ?>
+		<?php do_action( 'layout-sidebar-bottom-hook' ); ?>
 	</aside>
 <?php endif; ?>
