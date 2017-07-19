@@ -1127,7 +1127,7 @@ pre {
 	font: 1.2em 'dashicons';
 	margin: 0 0 0 -1.2em;
 	position: absolute;
-	top: .1em;
+	top: 0;
 }
 
 /**
@@ -1174,7 +1174,7 @@ pre {
 	font: 1.2em 'dashicons';
 	margin: 0 0 0 -1.2em;
 	position: absolute;
-	top: .1em;
+	top: 0;
 }
 
 /**
@@ -1717,6 +1717,7 @@ pre {
  */
 .search-result .search-result-title {
 	font-size: 1.2em;
+	margin: 0 0 10px 0;
 	padding: 0 0 0 1.5em;
 	position: relative;
 }
