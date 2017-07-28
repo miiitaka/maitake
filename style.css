@@ -704,34 +704,20 @@ pre {
 }
 
 .layout-container-list .list-post-time {
+	align-items: center;
+	display: flex;
 	font-size: .9em;
 	margin: 0 0 5px 0;
-	padding: 0 0 0 1.5em;
-	position: relative;
 }
 
-.layout-container-list .list-post-time time::before {
+.layout-container-list .list-post-time::before {
 	content: "\f321";
 	font: 1.2em 'dashicons';
-	line-height: 1.2;
-	margin: 0 0 0 -1.3em;
-	position: absolute;
-	top: 0;
+	padding: 0 3px 0 0;
 }
 
 .layout-container-list .list-post-categories {
 	font-size: .9em;
-	padding: 0 0 0 1em;
-	position: relative;
-}
-
-.layout-container-list .list-post-categories::before {
-	content: "\f203";
-	font: 1.2em 'dashicons';
-	line-height: 1.2;
-	margin: 0 0 0 -1em;
-	position: absolute;
-	top: 0;
 }
 
 .layout-container-list .list-post-categories a {
@@ -740,7 +726,7 @@ pre {
 	color: #444444;
 	display: inline-block;
 	font-size: .95em;
-	margin: 0 0 2px 0;
+	margin: 0 3px 3px 0;
 	padding: 0 .5em .1em .5em;
 }
 
@@ -769,21 +755,19 @@ pre {
 }
 
 .widget-title {
+	align-items: center;
 	border-bottom: 1px solid #444444;
+	display: flex;
 	font-size: 1.2em;
-	margin: 0 0 10px 0;
-	padding: 5px 0 5px 1.5em;
-	position: relative;
+	margin: 0;
+	padding: 5px 0;
 }
 
 .widget-title::before {
 	content: "\f480";
 	font: 1.2em 'dashicons';
 	line-height: 1.2;
-	margin: 0 0 0 -1.2em;
-	padding: 5px 0 0 0;
-	position: absolute;
-	top: 0;
+	padding: 0 5px 0 0;
 }
 
 /* Archive Widget */
@@ -865,20 +849,16 @@ pre {
 }
 
 .widget_recent_entries .post-date {
-	display: block;
-	line-height: 1.2;
-	margin: 3px 0;
-	padding: 0 0 0 1.2em;
-	position: relative;
+	align-items: center;
+	display: flex;
+	margin: 0 0 3px 0;
 }
 
 .widget_recent_entries .post-date::before {
 	content: "\f469";
 	font: 1.2em 'dashicons';
 	line-height: 1.2;
-	margin: 0 0 0 -1.2em;
-	position: absolute;
-	top: 0;
+	padding: 0 3px 0 0;
 }
 
 /* Meta Widget */
@@ -905,28 +885,23 @@ pre {
 }
 
 .widget_rss .rss-date {
-	display: block;
-	line-height: 1.2;
-	margin: 3px 0;
-	padding: 0 0 0 1.2em;
-	position: relative;
+	align-items: center;
+	display: inline-flex;
+	margin: 0 0 3px 0;
 }
 
 .widget_rss cite {
-	display: block;
+	align-items: center;
+	display: flex;
 	font-style: normal;
 	line-height: 1.2;
 	margin: 3px 0 5px 0;
-	padding: 0 0 0 1.5em;
-	position: relative;
 }
 
 .widget_rss .rss-date::before,
 .widget_rss cite::before {
 	font: 1.2em 'dashicons';
-	margin: 0 0 0 -1.2em;
-	position: absolute;
-	top: 3px;
+	padding: 0 3px 0 0;
 }
 
 .widget_rss .rss-date::before {
@@ -1755,10 +1730,10 @@ pre {
  * Archive parts
  */
 .archive-wrapper .archive-title {
+	align-items: center;
+	display: flex;
 	font-size: 1.2em;
 	margin: 0 0 10px 0;
-	padding: 0 0 0 1.5em;
-	position: relative;
 }
 
 .archive-wrapper .author-title::before,
@@ -1767,9 +1742,7 @@ pre {
 .archive-wrapper .tag-title::before {
 	font: 1.2em 'dashicons';
 	line-height: 1.2;
-	margin: 0 0 0 -1.2em;
-	position: absolute;
-	top: 0;
+	padding: 0 5px 0 0;
 }
 
 .archive-wrapper .author-title::before {
