@@ -21,9 +21,7 @@
 		?>
 	</header>
 	<footer>
-		<p class="list-post-time">
-			<time><?php the_time( get_option( 'date_format' ) . ' ' . get_option( 'time_format' ) ); ?></time>
-		</p>
+		<time class="list-post-time"><?php the_time( get_option( 'date_format' ) . ' ' . get_option( 'time_format' ) ); ?></time>
 	</footer>
 	<?php if ( get_the_category() ) : ?>
 		<div class="list-post-categories">
