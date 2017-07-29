@@ -1007,17 +1007,17 @@ pre {
 
 .post-header .post-meta {
 	list-style: none;
-	margin: 0 0 10px 0;
+	margin: 0;
 	padding: 0;
 }
 
 .post-header .post-tags,
 .post-header .post-modified-time,
 .post-header .post-time {
+	align-items: center;
+	display: inline-flex;
 	font-size: .9em;
 	margin: 5px 10px 0 0;
-	padding: 0 0 0 1.5em;
-	position: relative;
 }
 
 .post-header .post-tags::before,
@@ -1025,9 +1025,7 @@ pre {
 .post-header .post-time::before {
 	font: 1.2em 'dashicons';
 	line-height: 1.2;
-	margin: 0 0 0 -1.2em;
-	position: absolute;
-	top: 0;
+	padding: 0 3px 0 0;
 }
 
 .post-header .post-modified-time::before {
@@ -1091,18 +1089,17 @@ pre {
 }
 
 .post-footer .post-edit-link {
+	align-items: center;
+	display: flex;
 	font-size: 1em;
-	margin: 0 10px 0 0;
-	padding: 0 0 0 1.5em;
-	position: relative;
+	margin: 10px 0 0 0;
 }
 
 .post-footer .post-edit-link::before {
 	content: "\f109";
 	font: 1.2em 'dashicons';
-	margin: 0 0 0 -1.2em;
-	position: absolute;
-	top: 0;
+	line-height: 1.2;
+	padding: 0 5px 0 0;
 }
 
 /**
@@ -1440,20 +1437,19 @@ pre {
 }
 
 .comment-respond .comment-respond-title {
+	align-items: center;
 	border-bottom: solid 3px #ebebeb;
+	display: flex;
 	font-size: 1em;
 	margin: 0;
-	padding: 0 0 5px 1.5em;
-	position: relative;
+	padding: 0 0 5px 0;
 }
 
 .comment-respond .comment-respond-title::before {
 	content: "\f119";
 	font: 1.2em 'dashicons';
 	line-height: 1.2;
-	margin: 0 0 0 -1.2em;
-	position: absolute;
-	top: 0;
+	padding: 0 3px 0 0;
 }
 
 .comment-respond .comment-notes {
@@ -1465,18 +1461,15 @@ pre {
 }
 
 .comment-respond label {
-	display: block;
+	align-items: center;
+	display: flex;
 	margin: 0 0 3px 0;
-	padding: 0 0 0 1.5em;
-	position: relative;
 }
 
 .comment-respond label::before {
 	font: 1.2em 'dashicons';
 	line-height: 1.2;
-	margin: 0 0 0 -1.2em;
-	position: absolute;
-	top: 0;
+	padding: 0 3px 0 0;
 }
 
 .comment-respond .comment-form-comment label::before {
@@ -1643,26 +1636,21 @@ pre {
 	width: 50%;
 }
 
-.post-navigation .nav-previous {
-	margin: 0;
-	text-align: left;
-}
-
-.post-navigation .nav-next {
-	margin: 0;
-	text-align: right;
-}
-
 .post-navigation .nav-previous a,
 .post-navigation .nav-next a {
+	align-items: center;
 	background: #444444;
 	box-sizing: border-box;
 	border: solid 1px #ccc;
 	color: #fff;
-	display: block;
+	display: flex;
 	padding: 10px 5px;
 	text-decoration: none;
 	width: 100%;
+}
+
+.post-navigation .nav-next a {
+	justify-content: flex-end;
 }
 
 .post-navigation .nav-previous a:hover,
@@ -1673,28 +1661,22 @@ pre {
 
 .post-navigation .nav-previous a::before {
 	content: "\f141";
-	display: inline-block;
 	font: 1.2em 'dashicons';
-	margin: -.2em 2px 0 0;
-	vertical-align: middle;
 }
 
 .post-navigation .nav-next a::after {
 	content: "\f139";
-	display: inline-block;
 	font: 1.2em 'dashicons';
-	margin: -.2em 2px 0 0;
-	vertical-align: middle;
 }
 
 /**
  * Search parts
  */
 .search-result .search-result-title {
+	align-items: center;
+	display: flex;
 	font-size: 1.2em;
 	margin: 0 0 10px 0;
-	padding: 0 0 0 1.5em;
-	position: relative;
 }
 
 .search-result article {
@@ -1710,9 +1692,8 @@ pre {
 .search-result .search-result-title::before {
 	content: "\f179";
 	font: 1.2em 'dashicons';
-	margin: 0 0 0 -1.2em;
-	position: absolute;
-	top: 0;
+	line-height: 1.2;
+	padding: 0 5px 0 0
 }
 
 .search-result .search-result-post-title {
