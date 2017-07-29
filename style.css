@@ -1800,5 +1800,9 @@ pre {
 }
 
 .move-to-the-top span {
+	align-items: center;
+	display: flex;
+	height: 50px;
+	justify-content: center;
 	width: 50px;
 }
