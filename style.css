@@ -22,6 +22,11 @@ html {
 	-ms-text-size-adjust: 100%;
 }
 
+html * {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
 body {
 	margin: 0;
 }
@@ -759,7 +764,7 @@ pre {
 	border-bottom: 1px solid #444444;
 	display: flex;
 	font-size: 1.2em;
-	margin: 0;
+	margin: 0 0 10px 0;
 	padding: 5px 0;
 }
 
