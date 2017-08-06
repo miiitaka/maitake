@@ -62,9 +62,9 @@
 					}
 
 					if ( is_front_page() && is_home() ) {
-						$format .= '</h1></a>';
+						$format .= '</a></h1>';
 					} else {
-						$format .= '</p></a>';
+						$format .= '</a></p>';
 					}
 					echo $format;
 				?>
