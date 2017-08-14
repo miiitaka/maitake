@@ -288,7 +288,7 @@ add_filter( 'header_video_settings', 'theme_header_video_settings' );
 function theme_the_title( $title ) {
 	if ( is_search() ) {
 		$search_query = trim( get_search_query() );
-		$search_query = mb_convert_kana( $search_query, "as", "UTF-8" );
+		$search_query = mb_convert_kana( $search_query, 'as', 'UTF-8' );
 
 		if ( !empty( $search_query ) ) {
 			$title = str_replace( $search_query, '<mark>' . $search_query . '</mark>', $title );
@@ -308,7 +308,7 @@ add_action( 'the_title', 'theme_the_title' );
 function theme_the_excerpt( $excerpt ) {
 	if ( is_search() ) {
 		$search_query = trim( get_search_query() );
-		$search_query = mb_convert_kana( $search_query, "as", "UTF-8" );
+		$search_query = mb_convert_kana( $search_query, 'as', 'UTF-8' );
 
 		if ( !empty( $search_query ) ) {
 			$excerpt = str_replace( $search_query, '<mark>' . $search_query . '</mark>', $excerpt );
