@@ -4,7 +4,6 @@
  *
  * @link https://codex.wordpress.org/Theme_Development
  * @link https://codex.wordpress.org/Child_Themes
- * @link https://codex.wordpress.org/Plugin_API
  *
  * @package    WordPress
  * @subpackage Maitake
@@ -15,7 +14,7 @@
  * Theme Setup
  *
  * @since 1.0.0
- * @link  https://developer.wordpress.org/reference/functions/add_theme_support/#post-thumbnails
+ * @link  https://developer.wordpress.org/reference/functions/add_theme_support/
  */
 function theme_setup() {
 	// Add thumbnail.
