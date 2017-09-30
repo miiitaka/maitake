@@ -125,9 +125,9 @@ function theme_setup() {
 	register_nav_menus( array(
 		'primary' => 'Primary Menu'
 	) );
-}
-add_action( 'after_setup_theme', 'theme_setup' );
 
+	theme_remove_action_head();
+}
 /**
  * wp_head() remove
  *
@@ -160,7 +160,7 @@ function theme_remove_action_head() {
 	remove_action( 'wp_head', 'wp_oembed_add_discovery_links' );
 	remove_action( 'wp_head', 'wp_oembed_add_host_js' );
 }
-add_action( 'after_setup_theme', 'theme_remove_action_head' );
+add_action( 'after_setup_theme', 'theme_setup' );
 
 /**
  * Widget Area Register
