@@ -143,9 +143,6 @@ function theme_remove_action_head() {
 	// Remove EditURI address.
 	remove_action( 'wp_head', 'rsd_link' );
 
-	// Remove REST API URL.
-	remove_action( 'wp_head', 'rest_output_link_wp_head');
-
 	// Remove emoji DNS prefetch.
 	add_filter( 'emoji_svg_url', '__return_false' );
 
