@@ -521,20 +521,16 @@ pre {
 }
 
 .header-nav-button {
-	display: block;
+	display: flex;
 	font-size: 1em;
 	padding: 0 0 0 1.5em;
-	position: relative;
 	text-align: left;
 }
 
 .header-nav-button::before {
 	content: "\f333";
-	display: inline-block;
 	font: 1.2em 'dashicons';
 	margin: 0 0 0 -1.2em;
-	position: absolute;
-	top: .1em;
 }
 
 .layout-header-nav {
