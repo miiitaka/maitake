@@ -273,41 +273,22 @@ function theme_header_video_settings( $settings ) {
 add_filter( 'header_video_settings', 'theme_header_video_settings' );
 
 /**
- * Search Result Markup Setting (title)
+ * Search Result Markup Setting (title & excerpt)
  *
  * @since  1.0.0
- * @param  string $title
- * @return string $title
+ * @param  string $str
+ * @return string $str
  */
-function theme_the_title( $title ) {
+function theme_search_mark( $str ) {
 	if ( is_search() ) {
 		$search_query = trim( get_search_query() );
 		$search_query = mb_convert_kana( $search_query, 'as', 'UTF-8' );
 
 		if ( !empty( $search_query ) ) {
-			$title = str_replace( $search_query, '<mark>' . $search_query . '</mark>', $title );
+			$str = str_replace( $search_query, '<mark>' . $search_query . '</mark>', $str );
 		}
 	}
-	return $title;
+	return $str;
 }
-add_action( 'the_title', 'theme_the_title' );
-
-/**
- * Search Result Markup Setting (excerpt)
- *
- * @since  1.0.0
- * @param  string $excerpt
- * @return string $excerpt
- */
-function theme_the_excerpt( $excerpt ) {
-	if ( is_search() ) {
-		$search_query = trim( get_search_query() );
-		$search_query = mb_convert_kana( $search_query, 'as', 'UTF-8' );
-
-		if ( !empty( $search_query ) ) {
-			$excerpt = str_replace( $search_query, '<mark>' . $search_query . '</mark>', $excerpt );
-		}
-	}
-	return $excerpt;
-}
-add_action( 'the_excerpt', 'theme_the_excerpt' );
+add_action( 'the_title',   'theme_search_mark' );
+add_action( 'the_excerpt', 'theme_search_mark' );
