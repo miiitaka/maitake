@@ -14,4 +14,4 @@
 		<?php dynamic_sidebar( 'sidebar-1' ); ?>
 		<?php do_action( 'layout-sidebar-bottom-hook' ); ?>
 	</div>
-<?php endif; ?>
+<?php endif;
