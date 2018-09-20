@@ -74,7 +74,7 @@ function theme_setup() {
 		'video'                  => true,
 		'wp-head-callback'       => '__return_false',
 		'admin-head-callback'    => '__return_false',
-		'admin-preview-callback' => '__return_false',
+		'admin-preview-callback' => '__return_false'
 	);
 	add_theme_support( 'custom-header', $args );
 
