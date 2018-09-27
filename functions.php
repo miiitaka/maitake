@@ -185,6 +185,16 @@ function theme_widgets_init() {
 	) );
 
 	register_sidebar( array(
+		'name'          => 'Page Footer',
+		'id'            => 'page-footer-1',
+		'description'   => 'Add widgets here to appear in your page footer.',
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
+	register_sidebar( array(
 		'name'          => '404 Footer',
 		'id'            => '404-footer-1',
 		'description'   => 'Add widgets here to appear in your 404 page footer.',
