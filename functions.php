@@ -212,20 +212,29 @@ add_action( 'widgets_init', 'theme_widgets_init' );
  * @since 1.0.0
  */
 function theme_scripts() {
-	theme_styles();
+	$version = wp_get_theme()->get( 'Version' );
+
+	theme_styles( $version );
+
+	wp_deregister_script( 'jquery' );
+	wp_deregister_script( 'jquery-migrate' );
+
+	wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js', array(), $version );
 
 	// Menu Script
-	wp_enqueue_script( 'theme-menu-script', get_template_directory_uri() . '/js/menu.js', array( 'jquery' ), '1.0.0', true );
+	wp_enqueue_script( 'theme-menu-script', get_template_directory_uri() . '/js/menu.js', array( 'jquery' ), $version, true );
 
 	// Move Script
-	wp_enqueue_script( 'theme-move-script', get_template_directory_uri() . '/js/move.js', array( 'jquery' ), '1.0.0', true );
+	wp_enqueue_script( 'theme-move-script', get_template_directory_uri() . '/js/move.js', array( 'jquery' ), $version, true );
 }
-function theme_styles() {
+function theme_styles( $version ) {
+	wp_dequeue_style( 'wp-block-library' );
+
 	// WordPress Dash Icon.
 	wp_enqueue_style( 'dashicons' );
 
 	// Theme stylesheet.
-	wp_enqueue_style( 'theme-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'theme-style', get_stylesheet_uri(), array(), $version );
 
 	// Comment Reply.
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
