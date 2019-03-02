@@ -1187,6 +1187,14 @@ pre {
 	padding: 0 15px;
 }
 
+.post-content dl {
+	padding: 0 15px;
+}
+
+.post-content dt {
+	font-weight: bold;
+}
+
 .post-content blockquote {
 	background: #ebebeb;
 	border: solid 1px #ddd;
@@ -1280,6 +1288,14 @@ pre {
 .page-content p {
 	margin: 0 0 10px 0;
 	padding: 0 15px;
+}
+
+.page-content dl {
+	padding: 0 15px;
+}
+
+.page-content dt {
+	font-weight: bold;
 }
 
 .page-content blockquote {
