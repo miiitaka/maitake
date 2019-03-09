@@ -1436,6 +1436,8 @@ pre {
 
 .author-info .author-biography {
 	font-size: .9em;
+	letter-spacing: 1px;
+	line-height: 1.8;
 	margin: 0;
 	padding: 0;
 }
