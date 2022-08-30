@@ -15,6 +15,7 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+<?php wp_body_open(); ?>
 	<div class="layout-header">
 		<?php
 		$description = get_bloginfo( 'description', 'display' );
