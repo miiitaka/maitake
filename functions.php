@@ -146,6 +146,9 @@ function theme_remove_action_head() {
 	// Remove Short Link
 	remove_action( 'wp_head', 'wp_shortlink_wp_head' );
 
+	// Remove REST API
+	remove_action( 'wp_head', 'rest_output_link_wp_head' );
+
 	// Remove emoji DNS prefetch.
 	add_filter( 'emoji_svg_url', '__return_false' );
 
