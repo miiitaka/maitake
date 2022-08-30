@@ -222,7 +222,7 @@ function theme_scripts() {
 	wp_deregister_script( 'jquery' );
 	wp_deregister_script( 'jquery-migrate' );
 
-	wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js', array(), $version );
+	wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), $version );
 
 	// Menu Script
 	wp_enqueue_script( 'theme-menu-script', get_template_directory_uri() . '/js/menu.js', array( 'jquery' ), $version, true );
