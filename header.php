@@ -52,7 +52,7 @@
 						$format = '<p class="layout-header-title">';
 					}
 
-					$format .= '<a href="' . esc_url( home_url( '/' ) ) . '">';
+					$format .= '<a href="' . home_url( '/' ) . '">';
 
 					if ( has_custom_logo() ) {
 						$custom_logo_id = get_theme_mod( 'custom_logo' );
@@ -81,13 +81,14 @@
 			<nav id="header-nav-switch" class="header-nav-menu-button">
 				<span class="header-nav-button">Menu</span>
 			</nav>
-			<nav class="layout-header-nav">
-				<?php
-				wp_nav_menu( array(
-					'theme_location' => 'primary'
-				) );
-				?>
-			</nav>
+			<?php
+			$args = [
+				'container'       => 'nav',
+				'container_class' => 'layout-header-nav',
+				'theme_location'  => 'primary'
+			];
+			wp_nav_menu( $args );
+			?>
 		<?php endif; ?>
 	</div>
 
