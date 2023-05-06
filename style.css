@@ -215,6 +215,11 @@ dd {
 	margin: 0;
 }
 
+code {
+	background: #ebebeb;
+	padding: 0 .5em;
+}
+
 /**
  * Accessibility
  */
@@ -1247,11 +1252,6 @@ pre {
 
 .post-content th {
 	background: #ebebeb;
-}
-
-.post-content code {
-	background: #ebebeb;
-	padding: 0 .5em;
 }
 
 .post-content figcaption {
