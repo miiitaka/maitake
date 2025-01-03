@@ -30,19 +30,19 @@ function theme_setup() {
 	 * Switch default core markup for search form, comment form, and comments
 	 * to output valid HTML5.
 	 */
-	add_theme_support( 'html5', array(
+	add_theme_support( 'html5', [
 		'search-form',
 		'comment-form',
 		'comment-list',
 		'gallery',
 		'caption'
-	) );
+	] );
 
 	/**
 	 * Post Formats Support
 	 * @see: https://codex.wordpress.org/Post_Formats
 	 */
-	add_theme_support( 'post-formats', array(
+	add_theme_support( 'post-formats', [
 		'aside',
 		'image',
 		'video',
@@ -52,7 +52,7 @@ function theme_setup() {
 		'status',
 		'audio',
 		'chat'
-	) );
+	] );
 
 	// Indicate widget sidebars can use selective refresh in the Customizer.
 	add_theme_support( 'customize-selective-refresh-widgets' );
@@ -61,7 +61,7 @@ function theme_setup() {
 	 * Custom Header Support
 	 * @see: https://codex.wordpress.org/Custom_Headers
 	 */
-	$args = array(
+	$args = [
 		'default-image'          => '',
 		'random-default'         => true,
 		'width'                  => 0,
@@ -75,14 +75,14 @@ function theme_setup() {
 		'wp-head-callback'       => '__return_false',
 		'admin-head-callback'    => '__return_false',
 		'admin-preview-callback' => '__return_false'
-	);
+	];
 	add_theme_support( 'custom-header', $args );
 
 	/**
 	 * Custom Background Support
 	 * @see: https://codex.wordpress.org/Custom_Backgrounds
 	 */
-	$args = array(
+	$args = [
 		'default-color'          => 'ffffff',
 		'default-image'          => '',
 		'default-repeat'         => '',
@@ -91,20 +91,20 @@ function theme_setup() {
 		'wp-head-callback'       => '_custom_background_cb',
 		'admin-head-callback'    => '__return_false',
 		'admin-preview-callback' => '__return_false'
-	);
+	];
 	add_theme_support( 'custom-background', $args );
 
 	/**
 	 * Theme Logo Support
 	 * @see: https://codex.wordpress.org/Theme_Logo
 	 */
-	$args = array(
+	$args = [
 	 	'height'      => 0,
 	 	'width'       => 0,
 	 	'flex-height' => true,
 	 	'flex-width'  => true,
-	 	'header-text' => array( 'site-title', 'site-description' )
-	);
+	 	'header-text' => [ 'site-title', 'site-description' ]
+	];
 	add_theme_support( 'custom-logo', $args );
 
 	/**
@@ -122,9 +122,9 @@ function theme_setup() {
 	set_post_thumbnail_size( 1200, 9999 );
 
 	// This theme uses wp_nav_menu() in two locations.
-	register_nav_menus( array(
+	register_nav_menus( [
 		'primary' => 'Primary Menu'
-	) );
+	] );
 
 	theme_remove_action_head();
 }
@@ -164,7 +164,7 @@ add_action( 'after_setup_theme', 'theme_setup' );
  * @link  https://developer.wordpress.org/reference/functions/register_sidebar/
  */
 function theme_widgets_init() {
-	register_sidebar( array(
+	register_sidebar( [
 		'name'          => 'Sidebar',
 		'id'            => 'sidebar-1',
 		'description'   => 'Add widgets here to appear in your sidebar.',
@@ -172,9 +172,9 @@ function theme_widgets_init() {
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
-	) );
+	] );
 
-	register_sidebar( array(
+	register_sidebar( [
 		'name'          => 'Post Footer',
 		'id'            => 'post-footer-1',
 		'description'   => 'Add widgets here to appear in your post footer.',
@@ -182,9 +182,9 @@ function theme_widgets_init() {
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
-	) );
+	] );
 
-	register_sidebar( array(
+	register_sidebar( [
 		'name'          => 'Page Footer',
 		'id'            => 'page-footer-1',
 		'description'   => 'Add widgets here to appear in your page footer.',
@@ -192,9 +192,9 @@ function theme_widgets_init() {
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
-	) );
+	] );
 
-	register_sidebar( array(
+	register_sidebar( [
 		'name'          => '404 Footer',
 		'id'            => '404-footer-1',
 		'description'   => 'Add widgets here to appear in your 404 page footer.',
@@ -202,7 +202,7 @@ function theme_widgets_init() {
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
-	) );
+	] );
 }
 add_action( 'widgets_init', 'theme_widgets_init' );
 
@@ -219,13 +219,13 @@ function theme_scripts() {
 	wp_deregister_script( 'jquery' );
 	wp_deregister_script( 'jquery-migrate' );
 
-	wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js', array(), $version );
+	wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js', [], $version );
 
 	// Menu Script
-	wp_enqueue_script( 'theme-menu-script', get_template_directory_uri() . '/js/menu.js', array( 'jquery' ), $version, true );
+	wp_enqueue_script( 'theme-menu-script', get_template_directory_uri() . '/js/menu.js', [ 'jquery' ], $version, true );
 
 	// Move Script
-	wp_enqueue_script( 'theme-move-script', get_template_directory_uri() . '/js/move.js', array( 'jquery' ), $version, true );
+	wp_enqueue_script( 'theme-move-script', get_template_directory_uri() . '/js/move.js', [ 'jquery' ], $version, true );
 }
 function theme_styles( $version ) {
 	wp_dequeue_style( 'wp-block-library' );
@@ -234,7 +234,7 @@ function theme_styles( $version ) {
 	wp_enqueue_style( 'dashicons' );
 
 	// Theme stylesheet.
-	wp_enqueue_style( 'theme-style', get_stylesheet_uri(), array(), $version );
+	wp_enqueue_style( 'theme-style', get_stylesheet_uri(), [], $version );
 
 	// Comment Reply.
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -249,7 +249,7 @@ add_action( 'wp_enqueue_scripts', 'theme_scripts' );
  * @since 1.0.0
  */
 function theme_remove_hentry( $classes ) {
-	$classes = array_diff( $classes, array( 'hentry' ) );
+	$classes = array_diff( $classes, [ 'hentry' ] );
 	return $classes;
 }
 add_filter( 'post_class','theme_remove_hentry' );

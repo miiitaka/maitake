@@ -30,9 +30,7 @@
 		<?php else : ?>
 			<footer class="post-footer">
 		<?php endif; ?>
-			<?php
-				edit_post_link( sprintf( 'Edit "%s"', get_the_title() ), '<span>', '</span>' );
-			?>
+			<?php edit_post_link( sprintf( 'Edit "%s"', get_the_title() ), '<span>', '</span>' ); ?>
 		</footer>
 	<?php endif; ?>
 </article>

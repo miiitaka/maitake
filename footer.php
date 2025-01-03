@@ -15,7 +15,7 @@
 	<div class="layout-footer">
 		<footer class="layout-footer-global">
 			<span>
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
+				<a href="<?= esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
 			</span>
 			<span>
 				<a href="https://wordpress.org/">Proudly powered by WordPress</a>

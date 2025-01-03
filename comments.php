@@ -52,14 +52,14 @@ if ( post_password_required() ) {
 
 		<ol class="comment-list">
 			<?php
-				wp_list_comments( array(
+				wp_list_comments( [
 					'style'       => 'ol',
 					'short_ping'  => true,
 					'avatar_size' => 42,
-				) );
+				] );
 			?>
 		</ol>
 
 		<?php the_comments_navigation(); ?>
 	</section>
-<?php endif; ?>
+<?php endif;

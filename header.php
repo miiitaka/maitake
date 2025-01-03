@@ -81,11 +81,7 @@
 				<span class="header-nav-button">Menu</span>
 			</nav>
 			<nav class="layout-header-nav">
-				<?php
-				wp_nav_menu( array(
-					'theme_location' => 'primary'
-				) );
-				?>
+				<?php wp_nav_menu( [ 'theme_location' => 'primary' ] ); ?>
 			</nav>
 		<?php endif; ?>
 	</div>
