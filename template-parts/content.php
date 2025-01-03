@@ -27,14 +27,14 @@
 				get_the_title()
 			) );
 
-			wp_link_pages( array(
+			wp_link_pages( [
 				'before'      => '<div><span>Pages:</span>',
 				'after'       => '</div>',
 				'link_before' => '<span>',
 				'link_after'  => '</span>',
 				'pagelink'    => '<span>Page</span>',
 				'separator'   => '<span>, </span>',
-			) );
+			] );
 		?>
 	</div>
 

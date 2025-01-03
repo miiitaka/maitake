@@ -38,17 +38,11 @@
 		?>
 	</div>
 
-	<?php
-		if ( '' !== get_the_author_meta( 'description' ) ) {
-			get_template_part( 'template-parts/biography' );
-		}
-	?>
+	<?php if ( '' !== get_the_author_meta( 'description' ) ) get_template_part( 'template-parts/biography' ); ?>
 
 	<?php if ( is_user_logged_in() ) : ?>
 		<footer class="post-footer">
-			<?php
-				edit_post_link( sprintf( 'Edit "%s"', get_the_title() ), '<p>', '</p>' );
-			?>
+			<?php edit_post_link( sprintf( 'Edit "%s"', get_the_title() ), '<p>', '</p>' ); ?>
 		</footer>
 	<?php endif; ?>
 </article>

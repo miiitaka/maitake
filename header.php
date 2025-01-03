@@ -81,14 +81,9 @@
 			<nav id="header-nav-switch" class="header-nav-menu-button">
 				<span class="header-nav-button">Menu</span>
 			</nav>
-			<?php
-			$args = [
-				'container'       => 'nav',
-				'container_class' => 'layout-header-nav',
-				'theme_location'  => 'primary'
-			];
-			wp_nav_menu( $args );
-			?>
+			<nav class="layout-header-nav">
+				<?php wp_nav_menu( [ 'theme_location' => 'primary' ] ); ?>
+			</nav>
 		<?php endif; ?>
 	</div>
 

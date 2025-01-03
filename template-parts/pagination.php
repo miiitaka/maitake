@@ -8,10 +8,10 @@
  */
 ?>
 <?php
-the_posts_pagination( array(
+the_posts_pagination( [
 	'before_page_number' => '',
 	'next_text'          => 'Next',
 	'prev_text'          => 'Prev',
 	'show_all'           => __return_true(),
 	'screen_reader_text' => 'Post Navigation'
-) );
+] );
