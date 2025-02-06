@@ -15,7 +15,6 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
 	<div class="layout-header">
 		<?php
 		$description = get_bloginfo( 'description', 'display' );
@@ -52,7 +51,7 @@
 						$format = '<p class="layout-header-title">';
 					}
 
-					$format .= '<a href="' . home_url( '/' ) . '">';
+					$format .= '<a href="' . esc_url( home_url( '/' ) ) . '">';
 
 					if ( has_custom_logo() ) {
 						$custom_logo_id = get_theme_mod( 'custom_logo' );

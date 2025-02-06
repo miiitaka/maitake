@@ -146,9 +146,6 @@ function theme_remove_action_head() {
 	// Remove Short Link
 	remove_action( 'wp_head', 'wp_shortlink_wp_head' );
 
-	// Remove REST API
-	remove_action( 'wp_head', 'rest_output_link_wp_head' );
-
 	// Remove emoji DNS prefetch.
 	add_filter( 'emoji_svg_url', '__return_false' );
 
@@ -222,7 +219,6 @@ function theme_scripts() {
 	wp_deregister_script( 'jquery' );
 	wp_deregister_script( 'jquery-migrate' );
 
-	wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), $version );
 	wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js', [], $version );
 
 	// Menu Script
