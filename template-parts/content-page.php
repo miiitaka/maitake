@@ -16,8 +16,17 @@
 		}
 	?>
 
-	<header class="page-header">
+	<header class="page-header post-header">
 		<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
+		<ul class="post-meta">
+			<li>
+				<time datetime="<?php the_modified_time( get_option( 'date_format' ) . ' ' . get_option( 'time_format' ) ); ?>" class="post-modified-time">Update date&nbsp;:&nbsp;<?php the_modified_time( get_option( 'date_format' ) . ' ' . get_option( 'time_format' ) ); ?></time>
+				<time datetime="<?php the_time( get_option( 'date_format' ) . ' ' . get_option( 'time_format' ) ); ?>" class="post-time">Release date&nbsp;:&nbsp;<?php the_time( get_option( 'date_format' ) . ' ' . get_option( 'time_format' ) ); ?></time>
+			</li>
+			<?php if ( has_tag() ) : ?>
+				<li class="post-tags"><?php the_tags( '<ul><li>', '</li><li>', '</li></ul>' ); ?></li>
+			<?php endif; ?>
+		</ul>
 	</header>
 
 	<?php do_action( 'layout-post-hook' ); ?>
