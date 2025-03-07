@@ -30,13 +30,13 @@ function theme_setup() {
 	 * Switch default core markup for search form, comment form, and comments
 	 * to output valid HTML5.
 	 */
-	add_theme_support( 'html5', [
+	add_theme_support( 'html5', array(
 		'search-form',
 		'comment-form',
 		'comment-list',
 		'gallery',
 		'caption'
-	] );
+	) );
 
 	/**
 	 * Post Formats Support
@@ -219,7 +219,7 @@ function theme_scripts() {
 	wp_deregister_script( 'jquery' );
 	wp_deregister_script( 'jquery-migrate' );
 
-	wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js', [], $version );
+	wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js', [], $version );
 
 	// Menu Script
 	wp_enqueue_script( 'theme-menu-script', get_template_directory_uri() . '/js/menu.js', [ 'jquery' ], $version, true );

@@ -21,14 +21,14 @@ if ( have_posts() ) : the_post();
 	}
 
 	if ( is_singular( 'attachment' ) ) {
-		the_post_navigation( [
+		the_post_navigation( array(
 			'prev_text' => 'Published in %title', 'Parent post link'
-		] );
+		) );
 	} elseif ( is_singular( 'post' ) ) {
-		the_post_navigation( [
+		the_post_navigation( array(
 			'next_text' => '%title',
 			'prev_text' => '%title',
-		] );
+		) );
 	}
 endif;
 ?>

@@ -8,7 +8,7 @@
  */
 ?>
 
-<form method="GET" action="<?= esc_url( home_url( '/' ) ); ?>">
+<form method="GET" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 	<label>
 		<input type="search" placeholder="Search" value="<?= get_search_query(); ?>" name="s" aria-label="search">
 	</label>

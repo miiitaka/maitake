@@ -16,10 +16,10 @@ if ( post_password_required() ) {
 	<?php endif; ?>
 
 	<?php
-		comment_form( array(
+		comment_form( [
 			'title_reply_before' => '<h2 class="comment-respond-title">',
 			'title_reply_after'  => '</h2>',
-		) );
+		] );
 	?>
 </section>
 
@@ -62,4 +62,4 @@ if ( post_password_required() ) {
 
 		<?php the_comments_navigation(); ?>
 	</section>
-<?php endif;
+<?php endif; ?>

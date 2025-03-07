@@ -15,6 +15,7 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+	<?php wp_body_open(); ?>
 	<div class="layout-header">
 		<?php
 		$description = get_bloginfo( 'description', 'display' );
@@ -81,7 +82,11 @@
 				<span class="header-nav-button">Menu</span>
 			</nav>
 			<nav class="layout-header-nav">
-				<?php wp_nav_menu( [ 'theme_location' => 'primary' ] ); ?>
+				<?php
+				wp_nav_menu( [
+					'theme_location' => 'primary'
+				] );
+				?>
 			</nav>
 		<?php endif; ?>
 	</div>

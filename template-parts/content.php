@@ -18,7 +18,7 @@
 
 	<?php the_excerpt(); ?>
 
-	<?php the_post_thumbnail( 'post-thumbnail', array( 'alt' => the_title_attribute( 'echo=0' ) ) ); ?>
+	<?php the_post_thumbnail( 'post-thumbnail', [ 'alt' => the_title_attribute( 'echo=0' ) ] ); ?>
 
 	<div>
 		<?php
