@@ -8,7 +8,7 @@
  */
 ?>
 <?php
-wp_link_pages( array(
+wp_link_pages( [
 	'before'           => '<nav class="post-link-pages">',
 	'after'            => '</nav>',
 	'link_before'      => '<span>',
@@ -18,4 +18,4 @@ wp_link_pages( array(
 	'nextpagelink'     => 'Next',
 	'previouspagelink' => 'Prev',
 	'pagelink'         => '%'
-) );
+] );

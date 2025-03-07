@@ -1,8 +1,8 @@
 === Maitake ===
 Contributors: the WordPress team
-Requires at least: WordPress 4.6
-Tested up to: WordPress 4.6.1
-Version: 1.0.0
+Requires at least: WordPress 6.7.2
+Tested up to: WordPress 6.7.2
+Version: 1.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: two-columns, left-sidebar, flexible-header, custom-background, custom-colors, custom-header, custom-menu, custom-logo, featured-image-header, featured-images, blog
